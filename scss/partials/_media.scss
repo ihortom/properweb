@@ -1,0 +1,144 @@
+//Media directives
+
+/*=================================================
+            Bootstrap 3 Media Queries             
+==================================================*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {    // 20em (with base font size 16px)
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {    // 30em : $screen-xs (depricated)
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {    // 48em : $screen-sm
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {    // 62em : $screen-md
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {   // 75em : $screen-lg
+
+}
+
+/***** Media Queries *****/
+@media only screen and (max-width: 1050px) {
+	#script-banner-plan-features {
+		width: 60%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#hosting_phone {
+		display: none;
+	}
+	#footer_menu, .footer_menu {
+		width: 45%;
+	}
+	#fscf_div_clear2_0,
+	#fscf_div_clear2_1,
+	#fscf_div_clear2_2,
+	#fscf_div_clear2_3,
+	#fscf_div_clear2_4,
+	#fscf_div_clear2_5 {
+		padding-left: 10px !important;
+	}
+
+	#sidebar.sidebar-in-headline,
+	.headline.article-with-sidebar {
+		display: block;
+		}
+	.pw_featured-box {
+	    width: 300px;
+	    margin: 0 auto 10px !important;
+	}
+
+}
+@media only screen and (max-width: 600px) {
+	/* For tablets: */
+	.headline {
+		padding-left: 20px;
+		padding-right: 20px;
+		}
+	#sidebar, .aside, .aside a, .aside img {
+	   display: block;
+	}
+	.aside { padding:0; }
+	.aside a, .aside img {
+    		margin: 0 auto;
+    	}
+	#domain-sidebar {
+	   width: 100%;
+	}
+	.article {padding: 20px;}
+}
+@media only screen and (max-width: 575px) {
+	#script-banner-plan-features {
+		width: 100%;
+	}
+	#script-banner-price {
+		width: 100%;
+		padding: 2em;
+	}
+}
+@media only screen and (max-width: 510px) {
+	#header_logo { width: 350px }
+	.grids-4 .panel-grid-cell {
+		width: 100%;
+		}
+	#fscf_div_clear2_0,
+	#fscf_div_clear2_1,
+	#fscf_div_clear2_2,
+	#fscf_div_clear2_3,
+	#fscf_div_clear2_4,
+	#fscf_div_clear2_5 {
+		width: 99% !important;
+		padding-left: 0 !important;
+	}
+	#fscf_captcha_image_div2 {
+		margin-top: 10px !important;
+		padding: 0 !important;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.panel-text {
+			padding: 10px;
+	 }
+	#footer_menu, .footer_menu {
+		width: 100%;
+		}
+	#header_top {
+		padding: 0 10px;
+	}
+
+	.article, #sidebar {padding: 10px;}
+	#header img { margin-left: 10px; }
+	#header_logo h1, #header_logo h2 { margin-left: 90px; }
+	#menu ul.dropdown { margin: 0; }
+	#domain-tld-banner-2 { 
+		font-size: 1.5em; 
+		padding: 5px;
+		}
+	#pw_domain-offer {
+		width: 100% !important;
+	}
+	.free-domain,
+	.domain-currency,
+	.domain-price {
+		font-size: 40px !important;
+	}
+	#domain-tld-banner-2 td.domain-price {
+		width: 100px;
+	}
+}
+@media only screen and (max-width: 360px) {
+	#phone { display: none; }
+}

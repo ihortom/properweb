@@ -1,0 +1,131 @@
+/***** default CSS *****/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;    //override Bootstrap's 14px
+}
+
+body {
+  min-width: inherit;
+  background-color: #FCEDED;
+  font-family: $main-font-family, $substitute-font-family;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $main-font-family, $substitute-font-family;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+h3 {
+    font-size: 1.1em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+h5 {
+    font-size: .9em;
+}
+
+h6 {
+    font-size: .8em;
+}
+
+ul, ol, dl, p {
+    line-height: $default-line-height;
+}
+
+small {
+    font-size: 80%; //same as normalize
+    code {
+            font-size: inherit;
+    }
+}
+
+label {
+    font-size: inherit;
+}
+
+td, th {
+    border-collapse: collapse;
+    border: 1px solid $theme-container-color;
+    padding: 15px;
+}
+
+th {
+    font-weight: 700;
+}
+
+table td {
+    vertical-align: middle;
+}
+
+input, 
+textarea {
+    font-size: 0.875rem;
+    font-family: $input-font-family;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+input#s {
+    width: 200px;
+}
+
+button,
+.button { 
+    margin: 0; 
+}
+
+.er404 {
+    padding: 0 20px 20px;
+    text-align: center;
+}
+
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+.clearfix { zoom: 1; } // needed for ie6-7
+
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; } // needed for ie6
+/* End hide from IE-mac */
+
+p {
+  margin: 0 0 $box-spacing;
+}
+
+a {
+  color: #1f83c2;
+	cursor: pointer;
+}
+
+a:hover, 
+a:focus {
+  text-decoration: none;
+}
+
+img {
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}

@@ -1,0 +1,15 @@
+input[type=submit],
+.read-more {
+    font-size: .8125rem;
+    padding: .625rem 1.25rem .6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: $substitute-font-family;
+}
+.btn-md {
+    @extend input[type=submit];
+    &.round {
+        border-radius: 20px;
+    }
+}

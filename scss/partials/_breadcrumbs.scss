@@ -1,0 +1,8 @@
+//Bootstrap amendments
+.breadcrumb {
+    border: none;
+    a:hover {
+        text-decoration: none;
+        border-bottom: 1px dotted $link-hover-color;
+    }
+}

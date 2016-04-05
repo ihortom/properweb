@@ -1,0 +1,16 @@
+
+ul.pagination li {
+    font-size: 1rem;
+    a {
+        font-family: $default-font-family;
+        padding: 0.625em 1em;
+    }
+    &.gallery-stats span {
+        border: none;
+        margin: 0.375em 0.0625em;
+        padding: $padding-base-vertical 0.4em;
+    }
+}
+.gallery-nav ul.pagination li {
+    padding-bottom: 0;
+}

@@ -1,0 +1,31 @@
+@import '../bootstrap/bootstrap/variables';
+
+//Dimensions
+$main-content-max-width: 1200px !default;    //same as $content_width in functions.php
+$cap-height: 230px !default;
+$header-height: 150px !default;
+$default-line-height: 1.4 !default;
+$navbar-width-md: 15em !default;
+
+//Fonts
+$font-size-base: 1em;
+$main-font-family: 'Open Sans', Tahoma, Geneva, sans-serif !default;
+$substitute-font-family: 'Open Sans', Tahoma, Geneva, sans-serif !default;
+$default-font: normal normal $font-size-base $main-font-family, $substitute-font-family !default;
+$default-font-family: $main-font-family, $substitute-font-family !default;
+$nav-default-font: normal bold 1em $main-font-family, $substitute-font-family !default;
+$input-font-family: 'Open Sans', Tahoma, Geneva, sans-serif !default;
+$footer-default-font-size: .9rem !default;
+$footer-default-font-family: 'Open Sans', Tahoma, Arial, sans-serif !default;
+$footer-default-font: normal $font-size-base $substitute-font-family !default;
+
+//Colors
+$theme-container-color: #008CBA !default;
+$footer-default-text-color: #dfdede !default;
+$secondary-color: #333 !default;
+$login-body-background: #ECFAFF !default;
+$login-form-background: #A0D3E8 !default;
+$panel-background: $state-info-bg !default;
+
+//Spaces
+$box-spacing: 20px !default;

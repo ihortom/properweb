@@ -1,0 +1,17 @@
+@import '../base/variables';
+
+body.login {
+    background: $login-body-background;
+}
+#login {
+    background: $login-body-background;
+}
+#loginform {
+    background: $login-form-background;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    box-shadow: 2px 2px 2px rgba(34,25,25,0.4);
+    -moz-box-shadow: 2px 2px 2px rgba(34,25,25,0.4);
+    -webkit-box-shadow: 2px 2px 2px rgba(34,25,25,0.4);
+}

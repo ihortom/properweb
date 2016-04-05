@@ -1,0 +1,136 @@
+#author,
+#email {
+    width: 100%;
+}
+#respond {
+    background-color: $panel-background;
+    h3 {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 1px solid #D8D8D8;
+        padding: 1em 0 .5em;
+        font-weight: bold;
+    }
+}
+
+#comment {
+    width: 100%;
+}
+
+label {
+    margin: .5em .5em 0 0;
+}
+
+#comments {
+    border-top: 2px solid #FCEDED;
+    margin-top: 10px;
+    h3 {
+        margin-top: 10px;
+        padding-left: 20px
+    }
+}
+
+.promo-date {
+    text-align: center;
+}
+
+.gbook-stats .glyphicon:before {
+    padding-right: 10px;
+    font-size: 150%;
+    color: $secondary-color;
+}
+
+.gbook-navigation {
+    width: 4.8125em;
+    float: right;
+}
+
+.gbook-navigation.nav-bottom {
+    margin-bottom: $box-spacing;
+}
+
+.gbook-navigation div {
+    text-align: center;
+}
+
+.gbook-navigation div a {
+    padding: 0.625em;
+    text-decoration: none;
+    color: $pagination-color;
+    font-weight: bold;
+    display: block;
+    border: 1px solid $pagination-border;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    &:hover {
+    color: $pagination-hover-color;
+    background-color: $pagination-hover-bg;
+    border-color: $pagination-hover-border;
+    .glyphicon:before {
+        padding: 0 !important;
+    }
+}
+}
+
+#content ul.comment-list,
+#content ul.comment-list ul.children {
+    list-style-type: none;
+}
+
+#content ul.comment-list {
+    margin: 0 0 $box-spacing;
+}
+
+.comment-list li {
+    border: 1px solid #FCEDED;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.comment-avatar,
+.comment-author {
+    float: left;
+}
+.comment-avatar {
+    padding: 0 10px;
+    border-right: 1px solid #FCEDED;
+    img.avatar {
+        margin-bottom: .8em;
+    }
+    &.col-xs-3 {
+        width: 20%;
+    }
+}
+.comment-author.col-xs-8 {
+    width: 70%;
+}
+
+.comment-date {
+    color: $secondary-color;
+}
+
+header.comment-author {
+    border-bottom: 1px dotted #FCEDED;
+    padding-bottom: 5px;
+}
+
+span.author {
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+#comments .children {
+    margin-left: 10%;
+}
+
+@media (min-width: 31.25em) and (max-width: 42.5em) {    // 500px - 680px
+    .message,
+    .contacts {
+        width: 50%;
+        float: left;
+    }
+}
