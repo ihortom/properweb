@@ -3,7 +3,7 @@
   width: 100%;
   padding: 0;
   font: $default-font;
-  color: #444;
+  color: $primary-color;
   background-color: #fff;
   float: none;
   position: static;
@@ -11,33 +11,30 @@
 
 #front_page_content, 
 #default_content {
-	float: none;
-	width: 100%;
-	margin: 0px;
-	padding: 0;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-#default_content {
-	background-color: #fff;
+    float: none;
+    width: 100%;
+    margin: 0px;
+    padding: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #fff;
 }
 
 #internal_page_1 {
-	float: none;
-	margin: 20px auto;
+    float: none;
+    margin: 20px auto;
 }
 
-h2.title {	// title
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 7px 10px 8px;
-    margin: 0 -20px 20px;
-    background-color: $theme-container-color;
-    line-height: 1.2;
+h2.pw-title {	// title
+    background: #AAA;
     text-align: center;
-    color: #7D0019;
+    clear: both;
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
 }
 
 img {
@@ -218,69 +215,82 @@ ol ol {
 }
 
 .pw-panel {
-	text-align: center;
-	padding: 20px;
-	margin-bottom: 0;
-	img.center {
-		max-width: 100%;
-		height: auto;
-	}
-	a.btn {
-		font-family: 'Eras Bk BT', Philosopher, 'Open Sans', sans-serif;;
-		font-size: 1.2em;
-		font-weight: bold;
-	}
-	hr { 
-		border: 0; 
-		height: 1px;
-		margin: 2em 0;
-		background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-		background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-		background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-		background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
-	 }
-	 @media (max-width: $screen-xs-max) {
-		 padding: 0.5em 0;
-	 }
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 0;
+    img.center {
+        max-width: 100%;
+        height: auto;
+    }
+    a.btn {
+        font-family: 'Eras Bk BT', $main-font-family;
+        font-size: 1.25em;
+        font-weight: bold;
+    }
+    hr { 
+        border: 0; 
+        height: 1px;
+        background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+        background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+        background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+        background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+    }
+    @media (max-width: $screen-xs-max) {
+        padding: 0.5em 0;
+    }
 }
 	
 .headline, 
 .panel-grid, 
 .panel-text {
-	text-align: center;
-	}
+    text-align: center;
+}
+
+.panel-grid hr {
+    margin: 0 0 1em 0;
+}
 
 .panel-text {
-	background: #fff;
+    background: #fff;
 }
 	
 .headline {
-	background: url("/images/bkg_headline.png") top center repeat;
-	padding: 20px;
-	h2 {
-		text-shadow: 2px 2px 5px #999;
-	}
+    background: url("/images/bkg_headline.png") top center repeat;
+    padding: 20px;
+    color: #111;
+    h2 {
+        text-shadow: $default-text-shadow;
+    }
 }
 	
 .panel-grid-cell {
-	.text {
-		margin: 0;
-	}
-	.icon-wrapper {
-		font-size: 3em;
-		div {			//circle
-			display: inline-block;
-			width: 80px;
-			height: 80px;
-			border-radius: 40px;
-			-moz-border-radius: 40px;
-			-webkit-border-radius: 40px;
-			box-shadow: 5px 2px 7px #999;
-			-moz-box-shadow: 5px 2px 7px #999;
-			-webkit-box-shadow: 5px 2px 7px #999;
-			background: #eee;
-		  }
-	}
+    .text {
+        margin: 0;
+    }
+    .icon-wrapper {
+        font-size: 3em;
+        div {		//circle
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+            -moz-border-radius: 40px;
+            -webkit-border-radius: 40px;
+            box-shadow: $default-box-shadow;
+            -moz-box-shadow: $default-box-shadow;
+            -webkit-box-shadow: $default-box-shadow;
+            background: #eee;
+        }
+    }
+}
+
+.with-cussion {
+    padding-left: 8px;
+    padding-right: 8px;
+    @media only screen and (min-width: 480px) {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
 }
 
 .size-auto, 

@@ -16,16 +16,20 @@ $default-font-family: $main-font-family, $substitute-font-family !default;
 $nav-default-font: normal bold 1em $main-font-family, $substitute-font-family !default;
 $input-font-family: 'Open Sans', Tahoma, Geneva, sans-serif !default;
 $footer-default-font-size: .9rem !default;
-$footer-default-font-family: 'Open Sans', Tahoma, Arial, sans-serif !default;
+$footer-default-font-family: 'Open Sans', Tahoma, Geneva, sans-serif !default;
 $footer-default-font: normal $font-size-base $substitute-font-family !default;
 
 //Colors
 $theme-container-color: #008CBA !default;
 $footer-default-text-color: #dfdede !default;
+$primary-color: #333 !default;
 $secondary-color: #333 !default;
+$lead-color: #111 !default;
 $login-body-background: #ECFAFF !default;
 $login-form-background: #A0D3E8 !default;
 $panel-background: $state-info-bg !default;
+$default-text-shadow: 2px 2px 5px #999 !default;
+$default-box-shadow: 3px 2px 5px #999 !default;
 
 //Spaces
 $box-spacing: 20px !default;

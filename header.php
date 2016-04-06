@@ -72,6 +72,94 @@ var template_directory = "<?php bloginfo('template_directory') ?>";
 			 Hosting <span>(ID:<?php echo $GLOBALS['rp_info']['store_id'];?>)</span> <span class="number">+<?php if (function_exists('rp_support_phone')) echo substr(rp_support_phone(), 1); ?> | </span>
 		</div>
 		<div id="dev_phone">Development 306-491-6539</div>
+                
+                <div id="login-form-text" class="left-drop has-dropdown not-click">
+                    <a id="signin" class="btn btn-md btn-primary"><span class="glyphicon glyphicon-log-in"></span>&nbsp; Sign In</a>
+			<ul id="menu-form" class="dropdown" style="display: none;">
+				<li id="form-body" class="has-form radius animated fadeInUp">
+					<form id="login-to-cp" method="post" action="//supremecenter.com/login/">
+						<div class="row sticky">
+							<div class="large-4 show-for-large-up columns">
+								<label for="user" class="right inline">Username</label>
+							</div>
+							<div class="large-8 columns">
+								<input id="user" type="text" name="username" placeholder="Username">
+							</div>
+						</div>
+						<div class="row sticky">
+							<div class="large-4 show-for-large-up columns">
+								<label for="password" class="right inline">Password</label>
+							</div>
+							<div class="large-8 columns">
+								<input id="password" name="password" type="password" placeholder="Password">
+							</div>
+							<input id="returnURL" name="returnURL" type="hidden" value="/">
+						</div>
+						<div class="row sticky links">
+							<div class="large-3 small-4 columns right">
+								<input type="submit" value="Login" class="button round sign-in-button">
+							</div>
+							<div class="large-5 small-4 columns text-center right"><a href="" id="forgot-btn" class="active">Forgot password?</a></div>
+							<div class="large-4 small-4 columns text-center right"><a href="" id="webmail-btn" class="active">Webmail Login</a></div>
+						</div>
+					</form>
+					<form id="login-to-webmail" method="post" action="//webmail.supremecluster.com">
+						<div class="row sticky">
+							<div class="large-4 show-for-large-up columns">
+								<label class="right inline">E-mail</label>
+							</div>
+							<div class="large-8 columns">
+								<input type="text" name="_user" placeholder="E-mail">
+							</div>
+							<div class="large-8 columns">
+								<input type="hidden" name="_action" value="login">
+							</div>
+							<div class="large-8 columns">
+								<input type="hidden" name="_token" value="token">
+							</div>
+						</div>
+						<div class="row sticky">
+							<div class="large-4 show-for-large-up columns">
+								<label for="mail-password" class="right inline">Password</label>
+							</div>
+							<div class="large-8 columns">
+								<input id="mail-password" name="_pass" type="password" placeholder="Password">
+							</div>
+						</div>
+						<div class="row sticky links">
+							<div class="large-5 small-8 columns"><a href="" class="back-btn active">« Back to CP Login</a></div>
+							<div class="large-3 small-4 columns right">
+								<input type="submit" value="Login" class="button round sign-in-button">
+							</div>
+						</div>
+					</form>
+					<form id="forgotten-pass" method="post" action="//supremecenter.com/login/lost-password/">
+						<div class="row sticky">
+							<div class="large-4 show-for-large-up columns">
+								<label class="right inline">Username</label>
+							</div>
+							<div class="large-8 columns">
+								<input type="text" name="username" placeholder="Username">
+							</div>
+						</div>
+						<div class="row sticky">
+							<div class="large-4 show-for-large-up columns">
+								<label for="forgot-mail" class="right inline">E-mail</label>
+							</div>
+							<div class="large-8 columns">
+								<input type="text" id="forgot-mail" name="email" placeholder="E-mail">
+							</div>
+						</div>
+						<div class="row sticky links">
+							<div class="large-5 small-8 columns"><a href="" class="back-btn active">« Back to CP Login</a></div>
+							<div class="large-3 small-4 columns right">
+								<input type="submit" value="Submit" class="button round sign-in-button">
+							</div>
+						</div>
+					</form>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<div id="header">
 		<div id="header_logo" class="clearfix">

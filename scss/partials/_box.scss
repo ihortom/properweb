@@ -69,21 +69,24 @@
 
 
 .pw_boxes {
-	width: 100%;
-	text-align: center;
-	text-shadow: 2px 2px 5px #999;
-	margin: 0 auto;
-	.col-sm-4 {
-		padding-left: 8px;
-		padding-right: 8px;
-		@media only screen and (min-width: $screen-sm-min) {
-			padding-left: 20px;
-			padding-right: 20px;
-		}
-	}
-	.list-group {
-		margin: 0;
-	}
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px 5px #999;
+    margin: 0 auto;
+    .with-cussion {
+        padding-left: 8px;
+        padding-right: 8px;
+        @media only screen and (min-width: $screen-md-min) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    .list-group {
+            margin: 0;
+    }
+    hr {
+        margin: 2em 0;
+    }
 }
 
 .best-plan {
@@ -97,22 +100,23 @@
 }
 
 .pw_box {
-	box-sizing: border-box;
-	//display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	border: 1px solid $list-group-border;
-	//margin-bottom: 10px;
-	width: 100%;
-	}
+    box-sizing: border-box;
+    //display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid $list-group-border;
+    //margin-bottom: 10px;
+    width: 100%;
+}
 
 .box-header {
-	font-weight: 600;
-	font-size: 1.6em;
-	font-family: 'Eras Bk BT', 'Open Sans', Arial, Helvetica, sans-serif;
-	line-height: 2.5;
-	margin: -1px -1px 0;
-	}
+    font-weight: 600;
+    font-size: 1.6em;
+    font-family: 'Eras Bk BT', $main-font-family;
+    line-height: 2.5;
+    margin: -1px -1px 0;
+    color: $lead-color;
+}
 
 
 /*
@@ -124,18 +128,19 @@
 	}
 */
 .personal-plan .box-header {
-	background: #3E3F3F;
-	color: #FFF;
-	}
+    background: #3E3F3F;
+    color: #FFF;
+}
+        
 .business-plan {
-	box-shadow: 5px 2px 7px #999;
-	-moz-box-shadow: 5px 2px 7px #999;
-	-webkit-box-shadow: 5px 2px 7px #999;
-	background: #eee;
-	margin: 10px 0;
-	.box-header {
-	color: #000;
-	}
+    box-shadow: $default-box-shadow;
+    -moz-box-shadow: $default-box-shadow;
+    -webkit-box-shadow: $default-box-shadow;
+    background: #eee;
+    margin: 10px 0;
+    .box-header {
+        //color: #000;
+    }
 }
 .best-plan img {
 	position:absolute;
@@ -161,14 +166,15 @@
 	}
 */
 .box-feature {
-		font-style: italic;
-		padding: 1em;
-		display: inline;
-		p {
-			margin: 0;
-			padding: 0 1em;
-		}
-	}
+    font-style: italic;
+    padding: 1em;
+    display: inline;
+    color: $lead-color;
+    p {
+            margin: 0;
+            padding: 0 1em;
+    }
+}
 	
 .fee {
 	font-family: $main-font-family;

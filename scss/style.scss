@@ -37,8 +37,8 @@
 @import 'partials/grid';
 @import 'modules/aside';
 @import 'partials/pagination';
-@import 'partials/gallery';
-@import 'modules/comments';
+//@import 'partials/gallery';
+//@import 'modules/comments';
 @import 'modules/footer';
 @import 'partials/box';
 @import 'partials/button';
@@ -92,43 +92,7 @@
 /*****************************************/
 /*** Custom                            ***/
 /*****************************************/
-#login-form-text {
-	float: right;
-  height: 15px;
-  margin: 15px 0 15px 10px;
-  padding: 0;
-  text-align: right;
-  font-size: 1em;
-  font-weight: bold;
-  color: #fff;
-	position: relative;
-}
-a#signin {
-	padding: 5px;
-	color: #00BCFF;
-	cursor: pointer;
-	}
-a#signin:hover {
-	text-decoration: none;
-	/* Box Shadow */
-	-moz-box-shadow:1px 1px 1px 0px #000; /* Firefox */
-    	-webkit-box-shadow:1px 1px 1px 0px #000; /* Safari, Chrome */
-    	box-shadow:1px 1px 1px 0px #000;
-	/* Gradient */
-	background-image: linear-gradient(bottom, #232323 0%, #434343 100%);
-	background-image: -o-linear-gradient(bottom, #232323 0%, #434343 100%);
-	background-image: -moz-linear-gradient(bottom, #232323 0%, #434343 100%);
-	background-image: -webkit-linear-gradient(bottom, #232323 0%, #434343 100%);
-	background-image: -ms-linear-gradient(bottom, #232323 0%, #434343 100%);
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0, #232323),
-		color-stop(1, #434343)
-	);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#434343', EndColorStr='#232323'); /* IE6 - IE9 */
-}
+
 #menu-form li.has-form {
   padding: 10px 15px 0 10px;
   -moz-border-radius: 0 0 4px 4px;

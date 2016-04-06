@@ -1,10 +1,10 @@
 /***** HEADER *****/
 #wrapper_fixed, 
 #header_top {
-	width: 100%;
-  height: auto;
-	max-width: $main-content-max-width;
-	min-width: 320px;
+    width: 100%;
+    height: auto;
+    max-width: $main-content-max-width;
+    min-width: 320px;
 }
 
 #wrapper_fixed {
@@ -13,31 +13,54 @@
 
 #header_top, 
 #header {
-	width: 100%;
-  float: none;
-	background: #333;
+    width: 100%;
+    float: none;
+    background: #333;
 }
 
 #header_top {
-  padding: 0 20px;
-	background: #444;
+    padding: 0 20px;
+    background: #444;
+    display: block;
 }
 
 #phone {
-	float: left;
-	padding: 7px 10px 10px 0;
-	color: #FFF;
+    float: left;
+    padding: 7px 10px 10px 0;
+    color: #fff;
 } 
 #hosting_phone,
 #dev_phone {
     float: left;
     width: auto;
-    height: 10px;
     padding: 10px 5px 10px 0;
     text-align: left;
     color: #fff;
     font-size: 0.9em;
-	}
+}
+
+//Sign In
+#login-form-text {
+    float: right;
+    //padding: 10px 5px 10px 0;
+    margin: 3px 0;
+    text-align: right;
+    //font-size: 1em;
+    font-weight: bold;
+    //color: #fff;
+    position: relative;
+    .glyphicon-log-in {
+        display: inline-block;
+        margin-top: -3px;
+    }
+}
+
+a#signin {
+    padding: 5px 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 17px;
+}
   
 #header {
   height: auto;  
@@ -63,18 +86,18 @@
   width: 500px;
   padding: .5em 0 .5em .5em;
   h1 a {
-	font-family: 'Eras Bd BT', Verdana, Arial, sans-serif;
-	font-size: 1.3em;
-	font-weight: bold;
-	line-height: 1.1;
-	display: block;
-	color: #fff;
-	text-shadow: 3px 3px 5px #000;
-	text-transform: uppercase;
-	text-decoration: none;
+    font-family: 'Eras Bd BT', Verdana, Arial, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1.1;
+    display: block;
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;
+    text-transform: uppercase;
+    text-decoration: none;
   }
   h2 {
-    font-family: 'Eras Bk BT', 'Open Sans', Arial, sans-serif;
+    font-family: 'Eras Bk BT', $main-font-family;
     font-size: 1.5em;
     line-height: 1.2em;
     font-weight: normal;
@@ -84,8 +107,8 @@
 
 #header_logo h1, 
 #header_logo h2 {
-	margin: 0 0 0 83px;
-	padding: 0
+    margin: 0 0 0 83px;
+    padding: 0
 }
 
 .breadcrumb {
