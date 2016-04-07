@@ -93,95 +93,16 @@
 /*** Custom                            ***/
 /*****************************************/
 
-#menu-form li.has-form {
-  padding: 10px 15px 0 10px;
-  -moz-border-radius: 0 0 4px 4px;
-  border-radius: 0 0 4px 4px;
-  margin-top: 0;
-  overflow: hidden;
-  background-color: #5f76c0;
-  border: 1px solid #1a2578;
-  border-top: 4px solid #e38922;
-	width: 100%;
-	height: 125px;
-	display: block;
-	}
-#menu-form {
-  width: 380px;
-  background: 0;
-	font-weight: normal;
-	display: none;
-	position: absolute;
-	right: -20px;
-	top: 35px;
-	padding: 0;
-	margin: 0;
-	z-index: 200;
-	}
-#menu-form input[type="text"],
-#menu-form input[type="password"] {
-	height: 2em;
-	padding: 0.35em;
-	width: 90%;
-	}
-#menu-form a {
-	color: #64C1BF;
-}
-#menu-form input.sign-in-button, #fscf_submit2 {
-  margin-top: 10px;
-  padding: 5px 15px;
-  font-size: 1em;
-  float: right;
-  font-weight: 400;
-  color: #fff;
-  text-shadow: 0 1px 1px #000;
-  border: 1px solid #e08824;
-  box-shadow: inset 0 -1px 1px #c26b08;
-	background: linear-gradient(to bottom,#f2ad5e 0,#e89a41 50%,#e89a41 51%,#e38922 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ad5e',endColorstr='#e38922',GradientType=0);
-  outline: 0;
-	cursor: pointer;
-	}
 #fscf_submit2 {
 	float:none;
 }
-.column, 
-.columns {
-  position: relative;
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
-  float: left;
-	}
-.large-3 {
-  width: 25%;
-	}
-.large-4 {
-	width: 33%;
-	}
-.large-5 {
-  width: 40%;
-	padding: 15px 0;
-}
-.large-8 {
-  width: 66%;
-	}
-.links .large-4,
-.links .large-5 {
-	padding: 15px 0;
-	}
+
+
 .right {
 	float: right;
 }
 .left {
 	float: left;
 }
-#login-to-cp,
-#login-to-webmail,
-#forgotten-pass { width: 100%; }
-#login-to-webmail {
-	display: none;
-}
-#forgotten-pass {
-	display: none;
-}
+
 
