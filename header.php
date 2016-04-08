@@ -99,7 +99,7 @@ var template_directory = "<?php bloginfo('template_directory') ?>";
                         <div class="form-group">
                             <div class="row links no-gutters">
                                 <div class="col-xs-4 text-left"><a href="" id="webmail-btn" class="active">Webmail Login</a></div>
-                                <div class="col-xs-4 text-left"><a href="" id="forgot-btn" class="active">Forgot password?</a></div>
+                                <div class="col-xs-4 text-left"><a href="" id="forgot-btn" class="active">Forgotten password?</a></div>
                                 <div class="col-xs-4">
                                     <input type="submit" value="Login" class="btn btn-info btn-md round sign-in-button">
                                 </div>
@@ -138,45 +138,52 @@ var template_directory = "<?php bloginfo('template_directory') ?>";
                             </div>
                         </div>
                         </div>
-                    </form>
-                        <form id="forgotten-pass" method="post" action="//supremecenter.com/login/lost-password/">
-                            <div class="row sticky">
-                                    <div class="large-4 show-for-large-up columns">
-                                            <label class="right inline">Username</label>
+                    </form>                    
+                    <form id="forgotten-pass" method="post" action="//supremecenter.com/login/lost-password/">
+                        <div class="panel panel-default panel-info text-center">
+                            <div class="panel-heading">Forgotten password?</div>
+                            <div class="panel-body">                           
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="glyphicon glyphicon-user input-group-addon"></span>
+                                        <input type="text" name="username" placeholder="Username" class="form-control">
                                     </div>
-                                    <div class="large-8 columns">
-                                            <input type="text" name="username" placeholder="Username">
+                                    <div class="input-group">
+                                        <span class="glyphicon glyphicon-envelope input-group-addon"></span>
+                                        <input type="text" id="forgot-mail" name="email" placeholder="Email" class="form-control">
                                     </div>
+                                </div>
+                                <input type="hidden" name="_action" value="login">
+                                <input type="hidden" name="_token" value="token">
                             </div>
-                            <div class="row sticky">
-                                    <div class="large-4 show-for-large-up columns">
-                                            <label for="forgot-mail" class="right inline">E-mail</label>
+                            <div class="panel-footer">
+                            <div class="form-group">
+                                <div class="row links no-gutters">
+                                    <div class="col-xs-8 text-left">
+                                        <a href="" class="back-btn active">« Back to Hepsia Control Panel Login</a>
                                     </div>
-                                    <div class="large-8 columns">
-                                            <input type="text" id="forgot-mail" name="email" placeholder="E-mail">
+                                    <div class="col-xs-4">
+                                        <input type="submit" value="Submit" class="btn btn-info btn-md round sign-in-button">
                                     </div>
+                                </div>
                             </div>
-                            <div class="row sticky links">
-                                    <div class="large-5 small-8 columns"><a href="" class="back-btn active">« Back to CP Login</a></div>
-                                    <div class="large-3 small-4 columns right">
-                                            <input type="submit" value="Submit" class="button round sign-in-button">
-                                    </div>
-                            </div>
+                        </div>
+                        </div>
                     </form>
                 </li>
             </ul>
         </div>
     </div>
     <div id="header">
-            <div id="header_logo" class="clearfix">
-                    <?php if (get_option('rpwp_logo_url')) : ?>
-                            <img src="<?php echo get_option('rpwp_logo_url'); ?>" alt="ProperWeb Logo">
-                    <?php else : ?>
-                            <img src="/images/logo.png" alt="ProperWeb Logo">
-                    <?php endif; ?>
-                    <h1><a href="<?php echo home_url()?>"><?php bloginfo('name')?></a></h1>
-                    <h2><?php bloginfo('description')?></h2>
-            </div>
+        <div id="header_logo" class="clearfix">
+            <?php if (get_option('rpwp_logo_url')) : ?>
+                <img src="<?php echo get_option('rpwp_logo_url'); ?>" alt="ProperWeb Logo">
+            <?php else : ?>
+                <img src="/images/logo.png" alt="ProperWeb Logo">
+            <?php endif; ?>
+            <h1><a href="<?php echo home_url()?>"><?php bloginfo('name')?></a></h1>
+            <h2><?php bloginfo('description')?></h2>
+        </div>
     </div>
 
     <?php include_once get_stylesheet_directory().'/parts/topbar.php'; ?>

@@ -90,52 +90,49 @@
 	}
 }
 @media only screen and (max-width: 510px) {
-	#header_logo { width: 350px }
-	.grids-4 .panel-grid-cell {
-		width: 100%;
-		}
-	#fscf_div_clear2_0,
-	#fscf_div_clear2_1,
-	#fscf_div_clear2_2,
-	#fscf_div_clear2_3,
-	#fscf_div_clear2_4,
-	#fscf_div_clear2_5 {
-		width: 99% !important;
-		padding-left: 0 !important;
-	}
-	#fscf_captcha_image_div2 {
-		margin-top: 10px !important;
-		padding: 0 !important;
-	}
+
+    #fscf_div_clear2_0,
+    #fscf_div_clear2_1,
+    #fscf_div_clear2_2,
+    #fscf_div_clear2_3,
+    #fscf_div_clear2_4,
+    #fscf_div_clear2_5 {
+            width: 99% !important;
+            padding-left: 0 !important;
+    }
+    #fscf_captcha_image_div2 {
+            margin-top: 10px !important;
+            padding: 0 !important;
+    }
 }
 @media only screen and (max-width: 450px) {
-	.panel-text {
-			padding: 10px;
-	 }
-	#footer_menu, .footer_menu {
-		width: 100%;
-		}
-	#header_top {
-		padding: 0 10px;
-	}
+    .panel-text {
+        padding: 10px;
+     }
+    #footer_menu, 
+    .footer_menu {
+        width: 100%;
+    }
 
-	.article, #sidebar {padding: 10px;}
-	#header img { margin-left: 10px; }
-	#header_logo h1, #header_logo h2 { margin-left: 90px; }
-	#menu ul.dropdown { margin: 0; }
-	#domain-tld-banner-2 { 
-		font-size: 1.5em; 
-		padding: 5px;
-		}
-	#pw_domain-offer {
-		width: 100% !important;
-	}
-	.free-domain,
-	.domain-currency,
-	.domain-price {
-		font-size: 40px !important;
-	}
-	#domain-tld-banner-2 td.domain-price {
-		width: 100px;
-	}
+    .article, 
+    #sidebar {padding: 10px;}
+
+    #domain-tld-banner-2 { 
+        font-size: 1.5em; 
+        padding: 5px;
+    }
+
+    #pw_domain-offer {
+        width: 100% !important;
+    }
+
+    .free-domain,
+    .domain-currency,
+    .domain-price {
+        font-size: 40px !important;
+    }
+
+    #domain-tld-banner-2 td.domain-price {
+        width: 100px;
+    }
 }

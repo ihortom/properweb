@@ -155,5 +155,31 @@ jQuery(document).ready(
                 $(this).parents('.gallery-item').find('img').removeClass('hovered');
             }
         );
+
+        //signin
+	$('#menu-form').hide();
+	$('#signin').click(function() {
+		$('#menu-form').slideToggle(500, "linear");
+	}); //end click
+	$("#webmail-btn, #forgot-btn").click(function(a){
+            a.preventDefault();
+            //$("#login-to-cp").animate({opacity:0,width:0}).hide();
+            $("#login-to-cp").hide();
+            if ($(this).attr("id")=="webmail-btn") {
+                //$("#login-to-webmail").show().animate({opacity:'+=1',width:'100%'})
+                $("#login-to-webmail").show();
+            }
+            if($(this).attr("id")=="forgot-btn") {
+                //$("#forgotten-pass").show().animate({opacity:'+=1',width:'100%'})
+                $("#forgotten-pass").show();
+            }
+	}); //end click
+	$(".back-btn, #menu-form .back").click(function(a) {
+		a.preventDefault();
+		//$("#forgotten-pass, #login-to-webmail").animate({opacity:0,width:0}).hide();
+		//$("#login-to-cp").show().animate({opacity:'+=1',width:'100%'})
+            $("#forgotten-pass, #login-to-webmail").hide();
+            $("#login-to-cp").show();
+	}); //end click
     }
 );

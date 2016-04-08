@@ -264,26 +264,7 @@ jQuery(document).ready(function($) {
 	$('#fscf_form1').submit(validateContact1);
 	$('#fscf_form2').submit(validateContact2);
 	
-	//signin
-	$('#menu-form').hide();
-	$('#signin').click(function() {
-		$('#menu-form').slideToggle(500, "linear");
-	}); //end click
-	$("#webmail-btn, #forgot-btn").click(function(a){
-		a.preventDefault();
-		$("#login-to-cp").animate({opacity:0,width:0}).hide();
-		if ($(this).attr("id")=="webmail-btn") {
-			$("#login-to-webmail").show().animate({opacity:'+=1',width:'100%'})
-		}
-		if($(this).attr("id")=="forgot-btn") {
-			$("#forgotten-pass").show().animate({opacity:'+=1',width:'100%'})
-		}
-	}); //end click
-	$(".back-btn, #menu-form .back").click(function(a) {
-		a.preventDefault();
-		$("#forgotten-pass, #login-to-webmail").animate({opacity:0,width:0}).hide();
-		$("#login-to-cp").show().animate({opacity:'+=1',width:'100%'})
-	}); //end click
+	
 	
 	//responsive menu
 	var isMenuExpanded = false;

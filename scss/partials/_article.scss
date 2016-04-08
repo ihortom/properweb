@@ -275,17 +275,43 @@ h3.domain-banner-title-1,
     text-align: center;
 }
 
-.domains { padding:10px 0; }
-
-.domains .panel-grid-cell {
-    border: 1px solid #c6c6c6;
-    -webkit-box-shadow: 5px 5px 3px #EEE;
-    -moz-box-shadow: 5px 5px 3px #EEE;
-    box-shadow: 5px 5px 3px #EEE;
+.domains { 
+    padding: 10px; 
+    background: url("/images/bkg_headline.png") top center repeat;
+    .col-xs-6,
+    .col-sm-4,
+    .col-md-2 {
+        padding: 0 5px;
+    }
+    h3 {
+        font-family: $fancy-font-family;
+        text-shadow: $default-text-shadow;
+    }
+    .panel {
+        margin: 0;
+        border: 1px solid #c6c6c6;
+        -webkit-box-shadow: $default-box-shadow;
+        -moz-box-shadow: $default-box-shadow;
+        box-shadow: $default-box-shadow;
+        a {
+            display: block;
+        }
+        &:hover {
+            background-color: darken(#fff, 5%);
+            border-color: darken(#c6c6c6, 10%);
+        }
+    }
+    .washer {
+        border: 5px solid transparent;
+    }
 }
 
-.domains h3, .domains .fee {
+
+.domains h3,
+.domains .fee {
     margin: 5px 0;
+    font-size: 1.5em;
+    text-align: center;
 }
 
 #jquery-live-search { width: 340px !important; }
