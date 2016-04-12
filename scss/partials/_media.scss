@@ -30,6 +30,13 @@
 }
 
 /***** Media Queries *****/
+@media only screen and (max-width: 1024px) {
+    #default_content h2.pw-title,
+    #default_content .headline h2 {
+        font-size: 1.5em;
+    }
+}
+
 @media only screen and (max-width: 1050px) {
 	#script-banner-plan-features {
 		width: 60%;
@@ -37,48 +44,46 @@
 }
 
 @media only screen and (max-width: 768px) {
-	#hosting_phone {
-		display: none;
-	}
-	#footer_menu, .footer_menu {
-		width: 45%;
-	}
-	#fscf_div_clear2_0,
-	#fscf_div_clear2_1,
-	#fscf_div_clear2_2,
-	#fscf_div_clear2_3,
-	#fscf_div_clear2_4,
-	#fscf_div_clear2_5 {
-		padding-left: 10px !important;
-	}
+    #hosting_phone {
+            display: none;
+    }
+    
+    #footer_menu, .footer_menu {
+            width: 45%;
+    }
+    
+    #fscf_div_clear2_0,
+    #fscf_div_clear2_1,
+    #fscf_div_clear2_2,
+    #fscf_div_clear2_3,
+    #fscf_div_clear2_4,
+    #fscf_div_clear2_5 {
+            padding-left: 10px !important;
+    }
 
-	#sidebar.sidebar-in-headline,
-	.headline.article-with-sidebar {
-		display: block;
-		}
-	.pw_featured-box {
-	    width: 300px;
-	    margin: 0 auto 10px !important;
-	}
-
+    #sidebar.sidebar-in-headline,
+    .headline.article-with-sidebar {
+        display: block;
+    }
+            
+    .pw_featured-box {
+        width: 300px;
+        margin: 0 auto 10px !important;
+    }
 }
 @media only screen and (max-width: 600px) {
-	/* For tablets: */
-	.headline {
-		padding-left: 20px;
-		padding-right: 20px;
-		}
-	#sidebar, .aside, .aside a, .aside img {
-	   display: block;
-	}
-	.aside { padding:0; }
-	.aside a, .aside img {
-    		margin: 0 auto;
-    	}
-	#domain-sidebar {
-	   width: 100%;
-	}
-	.article {padding: 20px;}
+    /* For tablets: */
+    #sidebar, .aside, .aside a, .aside img {
+       display: block;
+    }
+    .aside { padding:0; }
+    .aside a, .aside img {
+            margin: 0 auto;
+    }
+    #domain-sidebar {
+       width: 100%;
+    }
+    .article {padding: 20px;}
 }
 @media only screen and (max-width: 575px) {
 	#script-banner-plan-features {
@@ -136,3 +141,4 @@
         width: 100px;
     }
 }
+

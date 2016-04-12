@@ -184,7 +184,16 @@ a#signin {
 	display: none;
 }
 
-
+#crumbs {
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 5px 10px 5px 20px;
+    height: auto;
+    font-family: $main-font-family;
+    font-weight: 600;
+    color: #aaa;
+}
 /*
 #menu-form input.sign-in-button, #fscf_submit2 {
     margin-top: 10px;

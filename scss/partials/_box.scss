@@ -68,7 +68,7 @@
 /********** PROPERWEB PLUGIN    **********/
 
 
-.pw_boxes {
+.pw-boxes {
     width: 100%;
     text-align: center;
     text-shadow: 2px 2px 5px #999;
@@ -77,6 +77,10 @@
         padding-left: 8px;
         padding-right: 8px;
         @media only screen and (min-width: $screen-md-min) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        @media only screen and (min-width: $screen-lg-min) {
             padding-left: 20px;
             padding-right: 20px;
         }
@@ -118,6 +122,23 @@
     color: $lead-color;
 }
 
+.pw-packages .list-group {
+    font-weight: 600;
+}
+
+.pkg-basic .box-header {
+    color: #fff;
+    background-color: #333;
+}
+
+.pkg-standard .box-header {
+    color: #fff;
+    background-color: #805933;
+}
+
+.pkg-premium .box-header {
+    background-color: #CD7F32;
+}
 
 /*
 .pw_box.personal-plan {
@@ -142,11 +163,13 @@
         //color: #000;
     }
 }
+
 .best-plan img {
-	position:absolute;
-	right: 5px;
-	top: -9px;
-	}
+    position: absolute;
+    right: 10px;
+    top: -9px;
+}
+        
 .plan-bronze {
         background: #CD7F32;
 	}
@@ -177,15 +200,28 @@
 }
 	
 .fee {
-	font-family: $main-font-family;
-	font-size: 2em;
-	color: #176FA2;
-	}
+    font-family: $main-font-family;
+    font-size: 2em;
+    color: #176FA2;
+}
+
+.pw-plans .panel-body.fee {
+    padding-bottom: 0;
+}
 
 .box-cell.overlay {
     line-height: 1em;
     padding: 7px;
+    margin-top: 10px;
 }
+
+.btn-default {
+    color: $link-color;
+    &:hover {
+        color: $link-hover-color;
+    }
+}
+    
 .pw_featured-box {
 	display: 90%;
 	border: 1px solid #323232;
@@ -211,7 +247,6 @@
 	padding: 5px 10px;
 	}
 .sign-up .rpwp-button.colorize {
-    padding: 5px;
     color: #000;
     background-image: linear-gradient(bottom, #fa7b00 0%, #fdb200 48%, #febc00 52%, #fecd00 100%);
     background-image: -o-linear-gradient(bottom, #fa7b00 0%, #fdb200 48%, #febc00 52%, #fecd00 100%);

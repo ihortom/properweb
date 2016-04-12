@@ -15,13 +15,13 @@
 
 get_header();
 remove_filter ('the_content', 'wpautop');
-?>
-<div id="default_content" <?php if(isset($left_menu) && $left_menu) echo 'class="rpwp_content_with_left_menu"'?>>
-<?php
+
 /* Run the loop to output the posts.
  * If you want to overload this in a child theme then include a file
  * called loop-index.php and that will be used instead.
  */
-get_template_part( 'loop', 'index' );?>
-</div>
-<?php get_footer(); ?>
+get_template_part( 'loop', 'index' );
+
+get_footer(); 
+
+?>

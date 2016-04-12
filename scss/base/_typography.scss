@@ -90,8 +90,11 @@ p {
 }
 
 a {
-    color: #1f83c2;
+    color: $link-color;
     cursor: pointer;
+    &:hover {
+        color: $link-hover-color;
+    }
 }
 
 a:hover, 
