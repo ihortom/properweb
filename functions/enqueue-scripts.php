@@ -70,21 +70,24 @@ function pweb_scripts_and_styles() {
 			'site-js', 
 			get_stylesheet_directory_uri() . '/js/app.js',
 			array( 'jquery' ), '', true 
-	);
+	);/*
 	wp_enqueue_style(
 			'bootstrap', 
 			get_stylesheet_directory_uri().'/css/bootstrap.min.css',
 			array(), '3.3.6'
-	);
+	);*/
 /*
     wp_enqueue_style(
         'site', 
         get_stylesheet_directory_uri().'/style.css'
     );*/	
 		$parent_style = 'rpcs-style';
-		wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css', array(), '1.1.4' );    wp_enqueue_style( 'pweb-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ), '2.0');    wp_enqueue_script( 'pweb-signin', 
+		wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css', array(), '1.1.4' );    
+                wp_enqueue_style( 'pweb-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ), '2.0');    
+                /*
+                wp_enqueue_script( 'pweb-signin', 
 		
 		//move this to app.js
-		get_stylesheet_directory_uri() . '/js/signin.js', array('jquery'));
+		get_stylesheet_directory_uri() . '/js/signin.js', array('jquery'));*/
 }
 ?>

@@ -23,7 +23,10 @@
     src: url('fonts/erasn.woff') format('woff'), url('fonts/erasn.ttf') format('truetype');
 }
 
-@import 'bootstrap/bootstrap/variables';
+//@import 'bootstrap/bootstrap/variables';
+//@import 'bootstrap/bootstrap/mixins';
+
+@import 'bootstrap';
 
 @import 'base/variables';
 //@import 'base/reset';

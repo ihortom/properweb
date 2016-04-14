@@ -35,7 +35,7 @@ $nav-link-padding: 10px;
     @media only screen and (min-width: $grid-float-breakpoint) { 
         width: 100%;
         position: initial;
-        height: 2 * $nav-link-padding + $line-height-computed + 2px !important;
+        height: 2 * $nav-link-padding + $line-height-computed !important;
         &.middle {
             text-align: center;
         }

@@ -79,12 +79,12 @@ var template_directory = "<?php bloginfo('template_directory') ?>";
                 <li id="form-body" class="has-form radius animated fadeInUp">
                     <form id="login-to-cp" class="form-horizontal" method="post" action="//supremecenter.com/login/">
                         
-                        <div class="panel panel-default panel-info text-center">
+                        <div class="panel panel-default panel-primary text-center">
                             <div class="panel-heading">Login to Hepsia Control Panel</div>
                             <div class="panel-body">
                         
                         <div class="form-group">
-                            <div class="input-group">
+                            <div class="input-group pw-group-item">
                                 <span class="glyphicon glyphicon-user input-group-addon"></span>
                                 <input id="user" type="text" name="username" placeholder="Username" class="form-control">
                             </div>
@@ -109,11 +109,11 @@ var template_directory = "<?php bloginfo('template_directory') ?>";
                         </div>
                     </form>
                     <form id="login-to-webmail" method="post" action="//webmail.supremecluster.com">
-                        <div class="panel panel-default panel-info text-center">
+                        <div class="panel panel-default panel-primary text-center">
                             <div class="panel-heading">Login to Webmail</div>
                             <div class="panel-body">                           
                                 <div class="form-group">
-                                    <div class="input-group">
+                                    <div class="input-group pw-group-item">
                                         <span class="glyphicon glyphicon-envelope input-group-addon"></span>
                                         <input type="text" name="_user" placeholder="Email" class="form-control">
                                     </div>
@@ -140,11 +140,11 @@ var template_directory = "<?php bloginfo('template_directory') ?>";
                         </div>
                     </form>                    
                     <form id="forgotten-pass" method="post" action="//supremecenter.com/login/lost-password/">
-                        <div class="panel panel-default panel-info text-center">
+                        <div class="panel panel-default panel-primary text-center">
                             <div class="panel-heading">Forgotten password?</div>
                             <div class="panel-body">                           
                                 <div class="form-group">
-                                    <div class="input-group">
+                                    <div class="input-group pw-group-item">
                                         <span class="glyphicon glyphicon-user input-group-addon"></span>
                                         <input type="text" name="username" placeholder="Username" class="form-control">
                                     </div>

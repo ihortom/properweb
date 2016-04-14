@@ -1,4 +1,4 @@
-@import '../bootstrap/bootstrap/variables';
+@import '../bootstrap/variables';
 
 //Dimensions
 $main-content-max-width: 1200px !default;    //same as $content_width in functions.php
@@ -21,7 +21,7 @@ $footer-default-font-family: 'Open Sans', Tahoma, Geneva, sans-serif !default;
 $footer-default-font: normal $font-size-base $substitute-font-family !default;
 
 //Colors
-$theme-container-color: #008CBA !default;
+$theme-container-color: $btn-primary-bg !default; //old:#008CBA
 $footer-default-text-color: #dfdede !default;
 $primary-color: #333 !default;
 $secondary-color: #333 !default;

@@ -71,8 +71,14 @@ table td {
     vertical-align: middle;
 }
 
-input#s {
-    width: 200px;
+input {
+    font-style: italic;
+    &.btn {
+        font-style: normal;
+    }
+    &#s {
+        width: 200px;
+    }
 }
 
 button,
