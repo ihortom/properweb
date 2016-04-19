@@ -4,7 +4,7 @@
 function pweb_login_logo() { ?>
     <style type="text/css">
         .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/login-logo.png) !important;
+            background-image: url(/images/logo.png) !important;
             padding-bottom: 5px;
         }
     </style>

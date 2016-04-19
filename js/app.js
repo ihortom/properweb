@@ -184,7 +184,8 @@ jQuery(document).ready(
         
         //contact
         
-        $('#pwcf-submit').on('click submit', function(e) {           
+        $('#pwcf-submit').on('click', function(e) {           
+            e.preventDefault();
             passed = true;
             prefix = '#pwcf-';
             required = ['name','email','phone','subject', 'message'];
@@ -194,20 +195,20 @@ jQuery(document).ready(
                 if (!$(field).val().trim()) { 
                     $(field).parent('.input-group, .input-item').addClass('has-error');
                     passed = false; 
-                    e.preventDefault();
                 }
             });
-            if (passed) {
-                if (!isEmailValid($('#pwcf-email').val().trim())) {
-                    $('#pwcf-email').parent('.input-group').addClass('has-error');
-                    e.preventDefault();
-                }
-                if (!isPhoneValid($('#pwcf-phone').val().trim())) {
-                    $('#pwcf-phone').parent('.input-group').addClass('has-error');
-                    e.preventDefault();
-                }
+            if (!isEmailValid($('#pwcf-email').val().trim())) {
+                $('#pwcf-email').parent('.input-group').addClass('has-error');
+                passed = false;
             }
-            
+            if (!isPhoneValid($('#pwcf-phone').val().trim())) {
+                $('#pwcf-phone').parent('.input-group').addClass('has-error');
+                passed = false;
+            }
+            if (passed) {
+                $('#pwcf-referer').val(window.location.href);
+                $('#pwcf').submit();
+            }
         });
         
         $('#pwcf input, #pwcf textarea').on('change', function() {

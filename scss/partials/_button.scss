@@ -7,6 +7,7 @@
     font-weight: bold;
     font-family: $substitute-font-family;
 }
+
 .btn-md {
     @extend .read-more;
     &.round {
@@ -14,10 +15,9 @@
     }
 }
 
-
 .btn-lg {
-    text-transform: uppercase;
-    font-weight: bold;
+    @extend .read-more;
+    font-size: 1em;
     &.round {
         border-radius: 24px;
     }

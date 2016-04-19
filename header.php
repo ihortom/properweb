@@ -71,7 +71,7 @@ var template_directory = "<?php bloginfo('template_directory') ?>";
         <div id="hosting_phone">
             Hosting <span>(ID:<?php echo $GLOBALS['rp_info']['store_id'];?>)</span> <span class="number">+<?php if (function_exists('rp_support_phone')) echo substr(rp_support_phone(), 1); ?> | </span>
         </div>
-        <div id="dev_phone">Development 306-491-6539</div>
+        <div id="dev_phone">Development (306) 491-6539</div>
 
         <div id="login-form-text" class="left-drop has-dropdown not-click">
             <a id="signin" class="btn btn-md"><span class="glyphicon glyphicon-log-in"></span>&nbsp; Sign In</a>
@@ -101,7 +101,7 @@ var template_directory = "<?php bloginfo('template_directory') ?>";
                                 <div class="col-xs-4 text-left"><a href="" id="webmail-btn" class="active">Webmail Login</a></div>
                                 <div class="col-xs-4 text-left"><a href="" id="forgot-btn" class="active">Forgotten password?</a></div>
                                 <div class="col-xs-4">
-                                    <input type="submit" value="Login" class="btn btn-primary btn-md round sign-in-button">
+                                    <input type="button" value="Login" class="btn btn-primary btn-md sign-in-button">
                                 </div>
                             </div>
                         </div>
@@ -132,7 +132,7 @@ var template_directory = "<?php bloginfo('template_directory') ?>";
                                         <a href="" class="back-btn active">« Back to Hepsia Control Panel Login</a>
                                     </div>
                                     <div class="col-xs-4">
-                                        <input type="submit" value="Login" class="btn btn-primary btn-md round sign-in-button">
+                                        <input type="button" value="Login" class="btn btn-primary btn-md sign-in-button">
                                     </div>
                                 </div>
                             </div>
@@ -163,7 +163,7 @@ var template_directory = "<?php bloginfo('template_directory') ?>";
                                         <a href="" class="back-btn active">« Back to Hepsia Control Panel Login</a>
                                     </div>
                                     <div class="col-xs-4">
-                                        <input type="submit" value="Submit" class="btn btn-primary btn-md round sign-in-button">
+                                        <input type="button" value="Submit" class="btn btn-primary btn-md sign-in-button">
                                     </div>
                                 </div>
                             </div>
