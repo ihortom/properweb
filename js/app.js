@@ -208,12 +208,18 @@ jQuery(document).ready(
             if (passed) {
                 $('#pwcf-referer').val(window.location.href);
                 $('#pwcf').submit();
+                $('#pwcf-submit').attr('disabled','true');
+                $('#pwcf .progress').removeClass('invisible');
+                $(".progress-bar").animate({
+                    width: "100%"
+                }, 7000);
             }
         });
         
         $('#pwcf input, #pwcf textarea').on('change', function() {
             $(this).parent('.input-group, .input-item').removeClass('has-error');
         });
+
     }
 );
 

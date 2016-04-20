@@ -65,37 +65,91 @@ function pweb_theme_footer_widget() {
 }
 */
 
+//Hookup contact_form POST request to admin_post.php
+add_action( 'admin_post_nopriv_contact_form', 'pweb_send_contact_form' );
+add_action( 'admin_post_contact_form', 'pweb_send_contact_form' );
+
+function pweb_send_contact_form() {
+    
+    if (!(empty($_POST) && empty($_GET))) {
+        // get posted data into local variables
+        $email_to = get_bloginfo('admin_email');
+        $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+        $email_from = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL); 
+        $subject = "[ProperWeb]: " . filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_STRING); 
+        $subject = "=?utf-8?b?" . base64_encode($Subject) . "?=";
+        $company = filter_input(INPUT_POST, 'company', FILTER_SANITIZE_STRING); 
+        $phone = filter_input(INPUT_POST, 'phone'); 
+        $referer = filter_input(INPUT_POST, 'referer', FILTER_VALIDATE_URL);
+        $message = 
+            '\r\nCompany: '.$company.
+            '\r\nContact number: '.$phone.
+            '\r\nMessage:\n'.filter_input(INPUT_POST, 'message').
+                        '\r\nReferrer URL: '.$referer; 
+        $userip = ($_SERVER['X_FORWARDED_FOR']) ? $_SERVER['X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
+        $headers  = 'MIME-Version: 1.0' . "\n"; 
+        $headers .= 'Content-type: text/plain; charset=utf-8' . "\r\n";  
+
+        $success = true;
+        /*
+        // send email  
+        $success = mail($email_to, $subject, $message, $headers
+                                . "From: =?utf-8?b?" . base64_encode($name) . "?= <" . $email_from . ">\r\n"
+              . "X-Mailer: PHP/" . phpversion() . "\r\n"
+              . "X-From-IP: " . $userip);
+        */
+        if ($success) {
+            header("Location: {$referer}?message=sent");
+        }
+        else {
+            header("Location: {$referer}?message=error");
+        }
+    }
+}
+    
+
 add_shortcode('contact-us', 'pweb_contact_us_shortcode');
 
 //usage [contact-us]
 function pweb_contact_us_shortcode() {
-    $controller = '/contact.php';
+    $controller = esc_url( admin_url('admin-post.php') );
+    if ($_GET['message']=='sent') { $message = '<div class="alert alert-success" role="alert">
+    <span class="glyphicon glyphicon-ok gl-pad-right"></span> Your message has been sent successfully.
+    </div>'; }
+    elseif ($_GET['message']=='error') { $message = '<div class="alert alert-warning" role="alert">
+    <span class="glyphicon glyphicon-info-sign gl-pad-right"></span> Your  message has not been sent. Please, try again later.
+    </div>'; }
     $contact_form =<<<CONTACT
 <div class="pw-panel headline">
-<h2>Contact Us</h2>
-<div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2"><br>
-        <p>Send us a message and we will respond within 24 hours or call our developers in Saskatoon on (306) 491-6539</p>
+    <h2>Contact Us</h2>
+    <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2"><br>
+            <p>Send us a message and we will respond within 24 hours or call our developers in Saskatoon on (306) 491-6539</p>
+        </div>
     </div>
-</div>
+    <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+            {$message}
+        </div>
+    </div>
     <div class="row text-left">
         <div class="panel panel-default pw-contact-form col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
             <form id="pwcf" action="{$controller}" method="post">
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                                <label class="control-label" for="pwcf-name">Your Name:*</label>
-                                <div class="input-group">
-                                        <span class="glyphicon glyphicon-user input-group-addon"></span>
-                                        <input type="text" name="name" id="pwcf-name" class="form-control" placeholder="Your Name">
-                                </div>
+                            <label class="control-label" for="pwcf-name">Your Name:*</label>
+                            <div class="input-group">
+                                <span class="glyphicon glyphicon-user input-group-addon"></span>
+                                <input type="text" name="name" id="pwcf-name" class="form-control" placeholder="Your Name">
+                            </div>
                         </div>
                         <div class="form-group">
-                                <label class="control-label" for="pwcf-company">Company/Organization:</label>
-                                <div class="input-group">
-                                        <span class="glyphicon glyphicon-map-marker input-group-addon"></span>
-                                        <input type="text" name="company" id="pwcf-company" class="form-control" placeholder="Company/Organization">
-                                </div>
+                            <label class="control-label" for="pwcf-company">Company/Organization:</label>
+                            <div class="input-group">
+                                <span class="glyphicon glyphicon-map-marker input-group-addon"></span>
+                                <input type="text" name="company" id="pwcf-company" class="form-control" placeholder="Company/Organization">
+                            </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="pwcf-email">Contact information:*</label>
@@ -107,12 +161,12 @@ function pweb_contact_us_shortcode() {
                                 <div class="popover-content">123 456-7890</div>
                             </div>
                             <div class="input-group pw-group-item">
-                                    <span class="glyphicon glyphicon-envelope input-group-addon"></span>
-                                    <input type="email" name="email" id="pwcf-email" class="form-control" placeholder="Email address">
+                                <span class="glyphicon glyphicon-envelope input-group-addon"></span>
+                                <input type="email" name="email" id="pwcf-email" class="form-control" placeholder="Email address">
                             </div>
                             <div class="input-group">
-                                    <span class="glyphicon glyphicon-earphone input-group-addon"></span>
-                                    <input type="tel" name="phone" id="pwcf-phone" class="form-control" placeholder="Phone number: xxx xxx-xxxx">
+                                <span class="glyphicon glyphicon-earphone input-group-addon"></span>
+                                <input type="tel" name="phone" id="pwcf-phone" class="form-control" placeholder="Phone number: xxx xxx-xxxx">
                             </div>
                         </div>
                     </div>
@@ -132,10 +186,16 @@ function pweb_contact_us_shortcode() {
                     </div>
                 </div>
                 <div class="form-group text-center">
+                    <div class="row">
+                        <div class="progress invisible col-sm-6 col-sm-offset-3">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" style="width:10%"></div>
+                        </div>
+                    </div>
                     <input type="button" id="pwcf-submit" value="Send" class="btn btn-primary btn-lg">
                     <p><sub>* indicates required field</sub></p>
                 </div>
                 <input type="hidden" name="referer" id="pwcf-referer" value="">
+                <input type="hidden" name="action" value="contact_form">
             </form>
         </div>
     </div>

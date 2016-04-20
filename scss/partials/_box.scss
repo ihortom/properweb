@@ -264,10 +264,16 @@
 }
     
 //Contact form
-.pw-contact-form .form-group {
-    margin: 20px 0;
+.pw-contact-form {
+    .form-group {
+        margin: 20px 0;
+    }
+    .progress {
+        margin-top: -20px;
+        height: 3px;
+    }
 }
-
+    
 .has-error input,
 .has-error textarea {
     background-color: #FCFAD3;
