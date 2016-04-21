@@ -286,6 +286,9 @@ h3.domain-banner-title-1,
             border-color: darken(#c6c6c6, 10%);
         }
     }
+    .panel-body {
+        padding: .5em;
+    }
     .washer {
         border: 5px solid transparent;
     }
@@ -299,7 +302,20 @@ h3.domain-banner-title-1,
     text-align: center;
 }
 
-#jquery-live-search { width: 340px !important; }
+#jquery-live-search { 
+    width: 340px !important;
+    margin-top: 2px;
+    border-width: 1px;
+    .row div {
+        padding: 5px;
+        &.text {
+            padding: 10px 5px;
+        }
+    }
+    .btn {
+        width: 90px;
+    }
+}
 
 #sidebar, .aside {
     display: table-cell;
@@ -321,25 +337,6 @@ h3.domain-banner-title-1,
     text-align: center;
     font-size: 2em;
     padding: 20px;
-}
-
-/*** Contact Form Wide ***/
-.contact-form.wide { width:100%;max-width: 900px;margin:0 auto;text-align:left;border:2px solid #C6C6C6;padding:10px;margin-top:30px; }
-#fscf_div_clear2_0 { float:left; }
-#fscf_f_name2 { margin-bottom:10px !important; }
-#fscf_div_clear2_3 { float:left; }
-#fscf_div_clear2_1 { float:left; }
-#fscf_div_clear2_5 { float:left; }
-#fscf_captcha_field2 { margin-top:50px; }
-#fscf_form_error2 { text-align:center !important; }
-#fscf_form_error2:before { content:'\f071';font-family:FontAwesome; padding-right:10px; }
-#fscf_required2, #fscf_captcha_field2 label { padding-left: 20px; }
-
-#fscf_redirect2:before {
-    content: "\f05a";
-    font-family: FontAwesome;
-    color: #6C4444;
-    padding-right: 0.3em;
 }
 
 #domain_results_header {

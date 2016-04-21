@@ -101,7 +101,7 @@ var template_directory = "<?php bloginfo('template_directory') ?>";
                                 <div class="col-xs-4 text-left"><a href="" id="webmail-btn" class="active">Webmail Login</a></div>
                                 <div class="col-xs-4 text-left"><a href="" id="forgot-btn" class="active">Forgotten password?</a></div>
                                 <div class="col-xs-4">
-                                    <input type="button" value="Login" class="btn btn-primary btn-md sign-in-button">
+                                    <input type="submit" value="Login" class="btn btn-primary btn-md sign-in-button">
                                 </div>
                             </div>
                         </div>
@@ -132,7 +132,7 @@ var template_directory = "<?php bloginfo('template_directory') ?>";
                                         <a href="" class="back-btn active">« Back to Hepsia Control Panel Login</a>
                                     </div>
                                     <div class="col-xs-4">
-                                        <input type="button" value="Login" class="btn btn-primary btn-md sign-in-button">
+                                        <input type="submit" value="Login" class="btn btn-primary btn-md sign-in-button">
                                     </div>
                                 </div>
                             </div>
@@ -163,7 +163,7 @@ var template_directory = "<?php bloginfo('template_directory') ?>";
                                         <a href="" class="back-btn active">« Back to Hepsia Control Panel Login</a>
                                     </div>
                                     <div class="col-xs-4">
-                                        <input type="button" value="Submit" class="btn btn-primary btn-md sign-in-button">
+                                        <input type="submit" value="Submit" class="btn btn-primary btn-md sign-in-button">
                                     </div>
                                 </div>
                             </div>

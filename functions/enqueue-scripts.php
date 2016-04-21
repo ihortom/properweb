@@ -60,15 +60,15 @@ function pweb_scripts_and_styles() {
 
 	// css files
 	wp_enqueue_style("jquery-ui-theme", get_bloginfo('template_url').'/css/style.jquery-ui.css');
-		
+	/*	
 	wp_enqueue_script( 
 			'bootstrap', 
 			get_stylesheet_directory_uri() . '/js/bootstrap.min.js', 
 			array( 'jquery' ), '3.3.6', true 
-	);
+	);*/
 	wp_enqueue_script( 
 			'site-js', 
-			get_stylesheet_directory_uri() . '/js/app.js',
+			get_stylesheet_directory_uri() . '/js/app.min.js',
 			array( 'jquery' ), '', true 
 	);/*
 	wp_enqueue_style(

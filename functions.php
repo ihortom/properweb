@@ -81,23 +81,30 @@ function pweb_send_contact_form() {
         $company = filter_input(INPUT_POST, 'company', FILTER_SANITIZE_STRING); 
         $phone = filter_input(INPUT_POST, 'phone'); 
         $referer = filter_input(INPUT_POST, 'referer', FILTER_VALIDATE_URL);
+        $userip = ($_SERVER['X_FORWARDED_FOR']) ? $_SERVER['X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
+        date_default_timezone_set('America/Regina');
         $message = 
+            '\r\nName: '.$name.
+            '\r\nEmail: '.$email_from.
             '\r\nCompany: '.$company.
             '\r\nContact number: '.$phone.
             '\r\nMessage:\n'.filter_input(INPUT_POST, 'message').
-                        '\r\nReferrer URL: '.$referer; 
-        $userip = ($_SERVER['X_FORWARDED_FOR']) ? $_SERVER['X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
+            '\r\nReferrer URL: '.$referer.
+            '\r\nIP address: '. $userip.
+            '\r\nDate\\Time: '.date('m dd, YY H:i').
+            '\r\nUser agent: '.$_SERVER['HTTP_USER_AGENT']; 
+        
         $headers  = 'MIME-Version: 1.0' . "\n"; 
         $headers .= 'Content-type: text/plain; charset=utf-8' . "\r\n";  
 
-        $success = true;
-        /*
+        //$success = false;
+        
         // send email  
         $success = mail($email_to, $subject, $message, $headers
                                 . "From: =?utf-8?b?" . base64_encode($name) . "?= <" . $email_from . ">\r\n"
               . "X-Mailer: PHP/" . phpversion() . "\r\n"
               . "X-From-IP: " . $userip);
-        */
+        
         if ($success) {
             header("Location: {$referer}?message=sent");
         }
@@ -108,17 +115,22 @@ function pweb_send_contact_form() {
 }
     
 
-add_shortcode('contact-us', 'pweb_contact_us_shortcode');
+add_shortcode('pw-contact-us', 'pweb_contact_us_shortcode');
 
-//usage [contact-us]
+//usage [pw-contact-us]
 function pweb_contact_us_shortcode() {
     $controller = esc_url( admin_url('admin-post.php') );
+    $state = '';
     if ($_GET['message']=='sent') { $message = '<div class="alert alert-success" role="alert">
     <span class="glyphicon glyphicon-ok gl-pad-right"></span> Your message has been sent successfully.
-    </div>'; }
+    </div>'; 
+    $state = ' hidden';
+    }
     elseif ($_GET['message']=='error') { $message = '<div class="alert alert-warning" role="alert">
-    <span class="glyphicon glyphicon-info-sign gl-pad-right"></span> Your  message has not been sent. Please, try again later.
-    </div>'; }
+    <span class="glyphicon glyphicon-warning-sign gl-pad-right"></span> Your  message has not been sent. Please, try again later.
+    </div>'; 
+    $state = ' hidden';
+    }
     $contact_form =<<<CONTACT
 <div class="pw-panel headline">
     <h2>Contact Us</h2>
@@ -127,12 +139,12 @@ function pweb_contact_us_shortcode() {
             <p>Send us a message and we will respond within 24 hours or call our developers in Saskatoon on (306) 491-6539</p>
         </div>
     </div>
-    <div class="row">
+    <div class="row no-gutters">
         <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
             {$message}
         </div>
     </div>
-    <div class="row text-left">
+    <div class="row text-left{$state}">
         <div class="panel panel-default pw-contact-form col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
             <form id="pwcf" action="{$controller}" method="post">
                 <div class="row">
