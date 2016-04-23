@@ -49,11 +49,7 @@
     padding: 20px;
     vertical-align: middle;
 }
-.rp_pr_plan_header .rp_pr_plan {
-    font-weight: 600;
-    font-size: 1.4em;
-    font-family: 'Eras Bk BT', 'Open Sans', Arial, Helvetica, sans-serif;
-}
+
 .pr_rp_sing_up_form {
     padding: 5px 0;
     overflow: hidden;
@@ -126,18 +122,15 @@ h3.script-banner-title {
 }
 
 .headline h2,
-h3.domain-banner-title-1,
-#domain-search-form h3 {
+h3.domain-banner-title-1 {
   margin: 0;
-	padding-bottom: 10px;
-	background: url("/images/bkg_line_thin.png") bottom no-repeat;
-  //color: #6C4B2C;
-	}
+    padding-bottom: 10px;
+    background: url("/images/bkg_line_thin.png") bottom no-repeat;
+}
+    
 .headline h2,
 .panel-grid h3,
 .panel-grid h4,
-#domain-banner-1 h3,
-#domain-search-form h3,
 .pw-boxes .box-header {
   font-family: 'Eras Bk BT', 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 1.5em;
@@ -195,8 +188,7 @@ h3.domain-banner-title-1,
     padding: 0 0 0 9px;
 } 
 /*** Domains ***/
-#domain-banner-1,
-#domain-search-area-4,
+/*
 #domain-search-form {
     width: 100%;
     height: auto;
@@ -215,7 +207,7 @@ h3.domain-banner-title-1,
 #domain-search-form {
 	padding: 10px 0 10px;
 }
-#domain-banner-1 h3,
+
 #domain-search-form h3 {
 	float: none;
 	width: 100%;
@@ -224,32 +216,7 @@ h3.domain-banner-title-1,
 	margin: 0;
 	font-size: 1.5em;
 }
-#domain-banner-1 div,
-#domain-search-form div {
-	float: none;
-	width: 340px;
-	height: auto;
-	margin: 0px auto;
-	padding: 25px 0 0;
-}
-#domain_sld { width: 200px; height: 35px; font-size: 1.1em; }
-#domain_tld { width:70px; height: 35px; }
-.domain-search-button { width:65px; margin: 0; }
-
-#domain-banner-1 h4 {
-    float: none;
-    width: 100%;
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: normal;
-    color: #3d3d3e;
-    padding: 0;
-    margin: 1em 0;
-}
-
-#domain-banner-1 h4 strong.tld-cont {
-    font-size: 1.4em;
-}
+*/
 
 #promo-tlds {
     float: none;
@@ -260,8 +227,7 @@ h3.domain-banner-title-1,
     text-align: center;
 }
 
-.domains { 
-    padding: 10px; 
+.domains {  
     background: url("/images/bkg_headline.png") top center repeat;
     .col-xs-6,
     .col-sm-4,
@@ -339,6 +305,93 @@ h3.domain-banner-title-1,
     padding: 20px;
 }
 
-#domain_results_header {
-    float: none;
+div.vcenter {
+    min-height: 5rem;
 }
+
+p.vcenter {  //must be used with parent having relative position
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.fee p.vcenter {
+    right: 0;
+}
+
+.domain-results {
+    width: 80%;
+    font-size: 0.8em;
+    margin: 0 auto;
+    &>div {
+        background-color: #F4F4F4;
+        border-bottom: 1px solid #D6D6D6;
+    }
+}
+
+#domain-search-form {
+    form {
+        padding-top: 20px;
+    }
+    .input-group {
+        display: inline-table;
+        vertical-align: middle;
+    }
+    .tld-cont {
+        font-size: 1.5em;
+    }
+    .domain-search-button {
+        margin: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.form-inline .input-group.domain-search-input {
+    width: 100%;
+    border-radius: 6px;
+    @media (min-width: 480px) {
+        width: 420px;
+    }
+    @media (min-width: 768px) {
+        width: 540px;
+    }
+}
+
+#domain_sld {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1.125em; 
+    @media (min-width: 480px) {
+        width: 300px;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+    @media (min-width: 768px) {
+        width: 420px;
+    }
+}
+
+#domain_tld { 
+    font-weight: bold;
+    text-align: left;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    border-left: 1px solid #ccc;
+    width: 100%;
+    @media (min-width: 480px) {
+        width: 120px; 
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-left: 0;
+    }
+}
+
+@media (min-width: 480px) {
+    .domain-search-button {
+        margin: 0;
+    }
+}
+
+

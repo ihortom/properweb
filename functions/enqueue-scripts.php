@@ -81,9 +81,9 @@ function pweb_scripts_and_styles() {
         'site', 
         get_stylesheet_directory_uri().'/style.css'
     );*/	
-		$parent_style = 'rpcs-style';
-		wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css', array(), '1.1.4' );    
-                wp_enqueue_style( 'pweb-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ), '2.0');    
+		//$parent_style = 'rpcs-style';
+		//wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css', array(), '1.1.4' );    
+                wp_enqueue_style( 'pweb-style', get_stylesheet_directory_uri() . '/style.css', null/*array( $parent_style )*/, '2.0');    
                 /*
                 wp_enqueue_script( 'pweb-signin', 
 		

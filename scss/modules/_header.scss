@@ -12,9 +12,9 @@
 }
 
 #header_top, 
-#header {
+#header,
+#footer {
     width: 100%;
-    float: none;
     background: #333;
 }
 
@@ -53,13 +53,6 @@
       float: left;  
       margin: 10px;
       padding: 0;
-      border: 0;
-      border-radius: 0;
-      -moz-border-radius: 0;
-      -webkit-border-radius: 0;
-      box-shadow: none;
-      -moz-box-shadow: none;
-      -webkit-box-shadow: none;
     }
     @media only screen and (min-width: 28.75em) {
         display: block;

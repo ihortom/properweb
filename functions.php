@@ -91,7 +91,7 @@ function pweb_send_contact_form() {
             '\r\nMessage:\n'.filter_input(INPUT_POST, 'message').
             '\r\nReferrer URL: '.$referer.
             '\r\nIP address: '. $userip.
-            '\r\nDate\\Time: '.date('m dd, YY H:i').
+            '\r\nDate\\Time: '.date('Y-m-d H:i').
             '\r\nUser agent: '.$_SERVER['HTTP_USER_AGENT']; 
         
         $headers  = 'MIME-Version: 1.0' . "\n"; 
