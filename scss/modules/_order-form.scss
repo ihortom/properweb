@@ -1,0 +1,297 @@
+.holder {
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .input {
+        height: 36px;
+        padding: 6px 12px;
+    }
+}
+
+.header,
+.tabs-new {
+    font-size: 16px;
+    span a {
+        padding: 6px 10px;
+    }
+    span.selected a {
+        color: #000 !important;
+        text-transform: uppercase;
+    }
+}
+.ui-widget {
+    font-family: $main-font-family;
+    font-size: $font-size-base;
+}
+
+#tld_price {
+    display: block;
+    padding-top: 10px;
+    span {
+        font-size: 0.8em;
+    }
+}
+
+/* Interaction states ------------*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid #A5A5A5; background:#D7D7D7; font-weight: normal; color: #000; }
+
+/* Component containers
+----------------------------------*/
+.ui-widget-header { 
+    border: 1px solid #ccc; 
+    background: #FFE8CE; 
+    color: #000; 
+    font-weight: bold; 
+    line-height:18px; 
+}
+
+.ui-widget-header a { color: #FFF; }
+.ui-widget-header span a:link { color: #000; }
+.ui-widget-header.header { color:#000; }
+#all_pm { height:90px; }
+#PayPalDP label { height:75px; overflow:visible; padding-top:15px; }
+#submit_order .ui-button {
+	font-size: 22px;
+	padding:6px 15px 9px;
+	border:0px;
+	color:#000;
+	background:#fec300;
+	font-weight:bold;
+}
+#submit_order .ui-button:hover {
+	font-size: 22px;
+	padding:6px 15px 9px;
+	text-decoration: none;
+	border:0px;
+	color:#000;
+	background:#fb8700;
+	font-weight:bold;
+}
+
+@media only screen and (max-width: 1024px) {
+    .tabs-new span{
+            display:block;
+            width:100%;
+            text-align: center;
+            line-height: 33px;
+            border-width: 0 !important;
+    }
+    .tabs-new span.selected{
+            padding:0 !important;
+    }
+    #Plans .split, #Semi_Dedicated .split, #VPS .split, #SOLUSVM .split, #Dedicated .split, #Domain_Names .split, #SSL .split{
+            width:100%;
+    }
+    #the_details .split, #the_details .input-details.sub-div-right:first-child{
+            width:100% !important;
+    }
+    #the_details .sub-div-right label {
+            margin-right: 40%;
+    }
+    #VPS .sub-div-right label {
+            margin-right: 25%;
+    }
+    #comp_phones{
+            width:auto !important;
+    }
+    #Register_Domains span#tld_price{
+            display:block;
+    }
+    table#selected_domains_table, #selected_domains_table .tld-price {
+            width: 100% !important;
+    }
+    #tlds-results-table .tld-price{
+            background:none;
+            border:none;
+            box-shadow:none;
+            color:#000;
+    }
+    #selected_domains_table [class*="tld-price"]{
+            text-align:center;
+    }
+    #solusvm_upgrades.sub-div-right div, #products-block .input-details.sub-div-right div{
+            padding-right:13%;
+    }
+    .info{
+            background-repeat:no-repeat;
+    }
+    #SSL .ssl_choice .ssl_details, #SSL .split.ssl_choice{
+            margin:0 !important;
+    }
+    #SSL .split.pl20{
+            padding-left:0 !important;
+            text-align:center;
+    }
+    /*Order form modal*/
+    .ui-dialog {
+            width: 97% !important;
+            overflow: hidden;
+            left: 1% !important;
+    }
+    .ui-dialog #domain_dialog{
+            width:auto !important;
+            height:auto !important;
+    }
+    .found_suggestions{
+            display: inherit !important;
+    }
+    #domain_search_content{
+            height:auto !important;
+            overflow:hidden;
+    }
+    #tld-checkboxes li {
+            width: 33.33% !important;
+    }
+    #terms_dialog {
+            padding:0;
+    }
+    #terms_dialog #Semi_Terms h2, #terms_dialog #Dedicated_Terms h2{
+            font-size:13px;
+    }
+    #terms_dialog #Semi_Terms table{
+            width:100% !important;
+    }
+    #colorbox, #cboxOverlay, #cboxWrapper{
+            overflow:visible !important;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    /*** Order form***/
+    #the_details .sub-div-right label {
+            margin-right: 15%;
+    }
+    #PayPalDP label, #FirstData label {
+            width: 50%;
+            margin-right:0 !important;
+    }
+    #amounts{
+            padding:0 !important;
+    }
+    #amounts div{
+            width:100%;	
+            float:none !important;
+    }
+    #selected_domains_table{
+            width:90% !important;
+    }
+    #selected_domains_table td{
+            display:inline-block;
+            padding:0 !important;
+            margin:0 !important;
+    }
+    #selected_domains_table td:first-child{
+            width:55%;
+            border:none !important;
+    }
+    #selected_domains_table td:nth-child(2), #selected_domains_table td:nth-child(3){
+            width:20%;
+    }
+    #selected_domains_table td:nth-child(4){
+            width:5%;
+            border:none !important;
+    }
+    #selected_domains_table .promo_td{
+            width:100% !important;
+            border-bottom:none;
+    }
+    #solusvm_upgrades.sub-div-right div, #products-block .input-details.sub-div-right div{
+            padding-right:0;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    #username-block input.wide{
+            width:180px;
+    }
+    .sub-div-right div, #the_details .sub-div-right label, #SSL .ssl_choice .ssl_details .row div:first-of-type, #SSL .split.pl20{
+            text-align:left !important;
+    }
+    #the_details .sub-div-right label span ~ input, #the_details .sub-div-right label span ~ select, #the_details .sub-div-right label input[name="address2"], #SSL .ssl_choice .ssl_details .row, #SSL .ssl_choice .ssl_details .row select, #SSL .ssl_choice .ssl_details .row input{
+            width:90%;
+            display:inline-block;
+    }
+    #vps_upgrades + .sub-div-right label span, #SOLUSVM .sub-div-right label span:first-child, #Dedicated .sub-div-right label span:first-child{
+            display:block;
+    }
+    #VPS .sub-div-right label, #SOLUSVM .sub-div-right label, #Dedicated .sub-div-right label{
+            display:block;
+            margin-right:0;
+    }
+    #solusvm_upgrades.sub-div-right label span:first-child, #dedicated_upgrades.sub-div-right label span:first-child{
+            display:inline-block;
+    }
+    #Register_Domains input.wide, #Host_Domain input.wide{
+            width: 150px;
+    }
+    #Register_Domains select.small{
+            width: 85px;
+            margin-top: 10px;
+    }
+    #comp_phones, #comp_details.split, #SSL .ssl_choice .ssl_details .row div{
+            width: 100% !important;
+    }
+    .domains-result-table{
+            width:100% !important;
+    }
+    .domains-result-table td {
+            vertical-align: top;
+            padding: 5px 0 !important;
+            display: inline-block;
+            width: 100% !important;
+            text-align: center !important;
+    }
+    #selected_domains_table td:nth-child(1) span, #selected_domains_table td:nth-child(1) strong{
+            line-height:normal;
+    }
+    #selected_domains_table td:nth-child(1) span, #selected_domains_table td:nth-child(1) strong{
+            word-wrap: break-word;
+    }
+    #selected_domains_table td:nth-child(2), #selected_domains_table td:nth-child(3){
+            vertical-align:bottom;	
+    }
+    #tlds-results-table tr:nth-child(2n+1){
+            background:#fff;
+    }
+    #domain_search_content #tlds-results-table tr td:nth-child(2){
+            width: 68% !important;
+            text-align:left !important;
+    }
+    #domain_search_content #tlds-results-table tr td:nth-child(3){
+            width: 30% !important;
+    }
+    #domain_search .ssl_period_select{
+            margin-top:25px !important;
+    }
+    .approver_email .ssl_approver_email{
+            margin: 5px auto 0 !important;
+            width: 80%;
+            float: left;
+    }
+    #domain_search_content .domains-result-table td.period select {
+            width: 70px;
+    }
+    #domain_dialog #search_input input.wide{
+            width: 200px;
+    }
+    form#whois_form table td {
+            display: inline-block;
+            width: auto;
+    }
+    form#whois_form table td:first-child {
+            text-align: left;
+    }
+    form#whois_form table td:nth-child(3) {
+             display: block;
+    }
+    #the_details .split, #the_details .input-details.sub-div-right:first-child {
+            width: 91% !important;
+    }
+    #selected_domains .additional_service{
+            margin-left:0 !important;
+            font-size: 11px;
+    }
+}

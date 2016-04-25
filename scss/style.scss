@@ -23,8 +23,8 @@
     src: url('fonts/erasn.woff') format('woff'), url('fonts/erasn.ttf') format('truetype');
 }
 
-//@import 'bootstrap/bootstrap/variables';
-//@import 'bootstrap/bootstrap/mixins';
+//@import 'bootstrap/variables';
+//@import 'bootstrap/mixins';
 
 @import 'bootstrap';
 
@@ -47,6 +47,7 @@
 @import 'partials/button';
 @import 'partials/bs-adjust';
 @import 'partials/media';
+@import 'modules/order-form';
 
 
 /*******************/
