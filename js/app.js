@@ -44,7 +44,10 @@ jQuery(document).ready(
                 $(this).parents(".popover").popover('hide');
             }
         );
-
+        
+        // handle inline popover
+        $('[data-toggle="popover"]').popover();
+        
         //gallery pagination
         var total_pages = parseInt($('.gallery').attr('gallery-pages'));
         var imgs_per_page = parseInt($('.gallery').attr('imgs-per-page'));
