@@ -319,6 +319,42 @@ p.vcenter {  //must be used with parent having relative position
     right: 0;
 }
 
+#pw-presentation {
+    text-shadow: 2px 2px 5px #999;
+    width: 800px;
+    margin: 0 auto;
+    .pw-plan {
+        text-align: center;
+        .glyphicon {
+            font-size: 1.5em;
+        }
+        .glyphicon-ok-circle {
+            color: green;
+        }
+        .glyphicon-remove-circle {
+            color: red;
+        }
+    }
+    .pw-plan-header {
+        color: #111;
+        text-shadow: $default-text-shadow;
+        font-family: 'Eras Bk BT', 'Open Sans', sans-serif;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    .fee {
+        font-size: 1.5em;
+    }
+    .pw-desc {
+        font-size: 1rem;
+        text-align: left;
+    }
+    .pw-feature-header {
+        font-weight: bold;
+        background-color: #eee;
+    }
+} 
+
 .domain-results-main {
     padding: 0;
     .row {

@@ -51,15 +51,6 @@
     #footer_menu, .footer_menu {
             width: 45%;
     }
-    
-    #fscf_div_clear2_0,
-    #fscf_div_clear2_1,
-    #fscf_div_clear2_2,
-    #fscf_div_clear2_3,
-    #fscf_div_clear2_4,
-    #fscf_div_clear2_5 {
-            padding-left: 10px !important;
-    }
 
     #sidebar.sidebar-in-headline,
     .headline.article-with-sidebar {
@@ -94,22 +85,7 @@
 		padding: 2em;
 	}
 }
-@media only screen and (max-width: 510px) {
 
-    #fscf_div_clear2_0,
-    #fscf_div_clear2_1,
-    #fscf_div_clear2_2,
-    #fscf_div_clear2_3,
-    #fscf_div_clear2_4,
-    #fscf_div_clear2_5 {
-            width: 99% !important;
-            padding-left: 0 !important;
-    }
-    #fscf_captcha_image_div2 {
-            margin-top: 10px !important;
-            padding: 0 !important;
-    }
-}
 @media only screen and (max-width: 450px) {
     .panel-text {
         padding: 10px;

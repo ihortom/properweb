@@ -70,7 +70,11 @@
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	margin: 10px;
 }
-	
+
+#footer-contacts ul li {
+    font-size: $footer-default-font-size;
+}
+
 #footer_menu ul li, 
 .footer_menu ul li {
 	padding: 0;

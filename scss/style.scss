@@ -23,6 +23,8 @@
     src: url('fonts/erasn.woff') format('woff'), url('fonts/erasn.ttf') format('truetype');
 }
 
+@import 'icomoon';
+
 //@import 'bootstrap/variables';
 //@import 'bootstrap/mixins';
 
@@ -33,13 +35,13 @@
 @import 'base/typography';
 @import 'modules/header';
 @import 'modules/nav';
-@import 'partials/breadcrumbs';
+//@import 'partials/breadcrumbs';
 //@import 'partials/slider';
 @import 'modules/content';
 @import 'partials/article';
 @import 'partials/grid';
-@import 'modules/aside';
-@import 'partials/pagination';
+//@import 'modules/aside';
+//@import 'partials/pagination';
 //@import 'partials/gallery';
 //@import 'modules/comments';
 @import 'modules/footer';

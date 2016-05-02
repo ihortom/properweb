@@ -50,20 +50,21 @@ function pweb_theme_enqueue_styles() {
     wp_enqueue_script( 'pweb-signin', get_stylesheet_directory_uri() . '/js/signin.js', array('jquery'));
 }
 add_action( 'wp_enqueue_scripts', 'pweb_theme_enqueue_styles' );
+*/
 
 function pweb_theme_footer_widget() {
-    if ( is_active_sidebar( 'sidebar-1' ) ) { unregister_sidebar('sidebar-1'); }
     register_sidebar( array(
         'name' => 'Footer Sidebar',
         'id' => 'footer-sidebar',
         'description' => 'Widget to display contacts',
         'before_widget' => '',
 	'after_widget'  => '',
-	'before_title'  => '<h3><img src="/images/logo24_framed.png" alt="Logo" style="padding-right:10px;vertical-align: middle;">',
+	'before_title'  => '<h3><img src="/images/logo24.png" alt="Logo" style="padding-right:10px;vertical-align: middle;">',
 	'after_title'   => '</h3>',
     ) );
 }
-*/
+
+add_action( 'widgets_init', 'pweb_theme_footer_widget' );
 
 //Hookup contact_form POST request to admin_post.php
 add_action( 'admin_post_nopriv_contact_form', 'pweb_send_contact_form' );

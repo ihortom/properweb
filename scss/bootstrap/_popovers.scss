@@ -84,7 +84,7 @@
   }
   &.right > .arrow {
     top: 50%;
-    left: -$popover-arrow-outer-width;
+    left: -$popover-arrow-outer-width - 20px;   // app spesific
     margin-top: -$popover-arrow-outer-width;
     border-left-width: 0;
     border-right-color: $popover-arrow-outer-fallback-color; // IE8 fallback

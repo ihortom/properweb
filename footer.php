@@ -25,12 +25,12 @@ foreach ($theme_options as $value) {
 				<?php }else{?>
 					<h3>About Us</h3>
 					<ul class="menu">
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_about_us'));?>">About Us</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo rp_default_page_link(array('key'=>"whyus"))?>">Why Us</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_contact_us'));?>">Contact Us</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_customer_support'));?>">Customer Support</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_videos'));?>">Videos</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_main_terms'));?>">Terms and Conditions</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_about_us'));?>">About Us</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo rp_default_page_link(array('key'=>"whyus"))?>">Why Us</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_contact_us'));?>">Contact Us</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_customer_support'));?>">Customer Support</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_videos'));?>">Videos</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_main_terms'));?>">Terms and Conditions</a></li>
 					</ul>
 				<?php }?>
 				</div>
@@ -41,12 +41,12 @@ foreach ($theme_options as $value) {
 				<?php }else{?>
 					<h3>Our Control Panel</h3>
 					<ul class="menu">
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_hepsia_cp'));?>">Hepsia CP</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_hepsia_vs_cpanel'));?>">Hepsia v. cPanel</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_domain_manager'));?>">Domain Manager</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_file_manager'));?>">File Manager</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_email_manager'));?>">E-mail Manager</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_web_accelerators'));?>">Web Accelerators</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_hepsia_cp'));?>">Hepsia CP</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_hepsia_vs_cpanel'));?>">Hepsia v. cPanel</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_domain_manager'));?>">Domain Manager</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_file_manager'));?>">File Manager</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_email_manager'));?>">E-mail Manager</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_web_accelerators'));?>">Web Accelerators</a></li>
 					</ul>
 				<?php }?>
 				</div>
@@ -55,27 +55,18 @@ foreach ($theme_options as $value) {
 					<h3><?=wp_nav_menu_title('footer3');?></h3>
 					<?php wp_nav_menu( array( 'container' =>'' ,'link_before' => ' ', 'fallback_cb' => '' , 'theme_location' => 'footer3' , 'depth' =>1) );?>
 				<?php }else{?>
-					<h3>Hosting Articles</h3>
+					<h3>Follow Us</h3>
 					<ul class="menu">
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_articles_main'));?>">Web Hosting Articles</a></li>
-					<?php if(is_array($GLOBALS['rp_settings']['footer_article_links'])){ ?>
-						<?php foreach($GLOBALS['rp_settings']['footer_article_links'] as $value){ $cmeta = get_post_custom(get_option(rp_default_page_id(array('key'=>'article_'.$value)))); ?><li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo rp_default_page_link(array('key'=>'article_'.$value))?>"><?php echo $cmeta['rpwp_menu_title'][0]; ?></a></li><?php }?>
-					<?php }else{ ?>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo rp_default_page_link(array('key'=>"article_rp_article_vps_hosting"))?>">VPS Hosting Explained</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo rp_default_page_link(array('key'=>"article_rp_article_dedicated_hosting"))?>">Dedicated Hosting</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo rp_default_page_link(array('key'=>"article_rp_article_web_hosting_hosting"))?>">Web Hosting Definition</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo rp_default_page_link(array('key'=>"article_rp_article_semi_dedicated_hosting"))?>">Semi-Dedicated Hosting</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo rp_default_page_link(array('key'=>"article_rp_article_domain_names"))?>">Domain Names</a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo rp_default_page_link(array('key'=>"article_rp_article_what_is_cloud_hosting"))?>">What is Cloud Hosting</a></li>
-					<?php } ?>
+                                            <li class="menu-item"><a href="https://www.facebook.com/ProperWeb"><span class="glyphicon icon-facebook2 gl-pad-right"></span>Facebook</a></li>
+                                            <li class="menu-item"><a href="https://twitter.com/proper_web"><span class="glyphicon icon-twitter gl-pad-right"></span>Twitter</a></li>
 					</ul>
 				<?php }?>
 				</div>
-			<div id="footer_menu">
+			<div id="footer-contacts" class="footer_menu">
 				<?php if(is_active_nav_menu('footer4')){?>
 				<h3><?=wp_nav_menu_title('footer4');?></h3>
 				<?php wp_nav_menu( array( 'container' =>'' ,'link_before' => ' ', 'fallback_cb' => '' , 'theme_location' => 'footer4' , 'depth' =>1) );?>
-				<?php }else{?>
+				<?php } else if ( is_active_sidebar('footer-sidebar') ) { dynamic_sidebar( 'footer-sidebar' ); } else { ?>
 				<h3>Application Hosting</h3>
 				<ul class="menu">
 					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_wordpress_hosting'));?>">WordPress Hosting</a></li>
@@ -85,7 +76,7 @@ foreach ($theme_options as $value) {
 					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_drupal_hosting'));?>">Drupal Hosting</a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_moodle_hosting'));?>">Moodle Hosting</a></li>
 				</ul>
-				<?php }?>
+				<?php } ?>
 			</div>
 <!--
 			<div class="clear"></div>

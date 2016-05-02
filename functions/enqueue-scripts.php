@@ -16,7 +16,7 @@ function pweb_scripts_and_styles() {
         get_stylesheet_directory_uri() . '/js/vendor/jquery.min.js',
         array(), '2.1.4', true 
     );
-*/    
+*/  wp_deregister_script('wrap-table');  
 	// js files
 	$arrOrders = array();
 	if(get_option('rp_order_form')) $arrOrders[] = get_option('rp_order_form');
@@ -56,7 +56,7 @@ function pweb_scripts_and_styles() {
 	wp_enqueue_script('colorbox', get_stylesheet_directory_uri().'/js/jquery.colorbox-min.js', array('jquery','jquery-migrate'), '1.6.3');
 	wp_enqueue_script('modernizr', get_bloginfo('template_url').'/js/modernizr-1.7.min.js', array(), '1.7');
 	wp_enqueue_script('st-tabs', get_bloginfo('template_url').'/js/init.js');
-	wp_enqueue_script('wrap-table', get_bloginfo('template_url').'/js/wrap-table.js');  
+	//wp_enqueue_script('wrap-table', get_bloginfo('template_url').'/js/wrap-table.js');  
 
 	// css files
 	wp_enqueue_style("jquery-ui-theme", get_bloginfo('template_url').'/css/style.jquery-ui.css');
