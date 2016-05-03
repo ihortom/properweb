@@ -11,6 +11,9 @@
         border-radius: 4px;
         background-color: $brand-primary;
         color: #fff;
+        &:hover {
+            background-color: darken($brand-primary, 10%);
+        }
     }
 }
 
@@ -87,9 +90,12 @@
 .ui-widget-content .ui-state-default, 
 .ui-widget-header .ui-state-default { 
     border: 1px solid #A5A5A5; 
-    background:#D7D7D7; 
+    background-color:#D7D7D7; 
     font-weight: normal; 
     color: #000; 
+    &:hover {
+        background-color: darken(#D7D7D7, 10%);
+    }
 }
 
 /* Component containers
@@ -108,76 +114,86 @@
 #all_pm { height:90px; }
 #PayPalDP label { height:75px; overflow:visible; padding-top:15px; }
 #submit_order .ui-button {
-	font-size: 22px;
-	padding:6px 15px 9px;
-	border:0px;
-	color:#000;
-	background:#fec300;
-	font-weight:bold;
+    font-size: 22px;
+    padding: 6px 15px 9px;
+    border: 0px;
+    color: #000;
+    background: #fec300;
+    font-weight: bold;
 }
 #submit_order .ui-button:hover {
-	font-size: 22px;
-	padding:6px 15px 9px;
-	text-decoration: none;
-	border:0px;
-	color:#000;
-	background:#fb8700;
-	font-weight:bold;
+    font-size: 22px;
+    padding:6px 15px 9px;
+    text-decoration: none;
+    border: 0px;
+    color: #000;
+    background: #fb8700;
+    font-weight: bold;
+}
+
+.all-features {
+    margin: 10px;
+}
+
+#ssl_certificate_wildcard_prices,
+#ssl_certificate_prices {
+    margin-top: 20px;
 }
 
 @media only screen and (max-width: 1024px) {
     .tabs-new span{
-            display:block;
-            width:100%;
-            text-align: center;
-            line-height: 33px;
-            border-width: 0 !important;
+        display: block !important;
+        width: 100%;
+        text-align: center;
+        line-height: 33px;
+        border-width: 0 !important;
     }
     .tabs-new span.selected{
-            padding:0 !important;
+        padding:0 !important;
     }
     #Plans .split, #Semi_Dedicated .split, #VPS .split, #SOLUSVM .split, #Dedicated .split, #Domain_Names .split, #SSL .split{
-            width:100%;
+        width:100%;
+        margin-top: 20px;
     }
     #the_details .split, #the_details .input-details.sub-div-right:first-child{
-            width:100% !important;
+        width:100% !important;
     }
     #the_details .sub-div-right label {
-            margin-right: 40%;
+        margin-right: 40%;
     }
     #VPS .sub-div-right label {
-            margin-right: 25%;
+        margin-right: 25%;
     }
     #comp_phones{
-            width:auto !important;
+        width:auto !important;
     }
     #Register_Domains span#tld_price{
-            display:block;
+        display: block;
     }
     table#selected_domains_table, #selected_domains_table .tld-price {
-            width: 100% !important;
+        width: 100% !important;
     }
     #tlds-results-table .tld-price{
-            background:none;
-            border:none;
-            box-shadow:none;
-            color:#000;
+        background: none;
+        border: none;
+        box-shadow: none;
+        color: #000;
     }
     #selected_domains_table [class*="tld-price"]{
-            text-align:center;
+        text-align:center;
     }
     #solusvm_upgrades.sub-div-right div, #products-block .input-details.sub-div-right div{
-            padding-right:13%;
+        padding-right:13%;
     }
     .info{
-            background-repeat:no-repeat;
+        background-repeat:no-repeat;
     }
     #SSL .ssl_choice .ssl_details, #SSL .split.ssl_choice{
-            margin:0 !important;
+        margin:0 !important;
     }
     #SSL .split.pl20{
-            padding-left:0 !important;
-            text-align:center;
+        padding-left:0 !important;
+        text-align:center;
     }
     /*Order form modal*/
     .ui-dialog {
