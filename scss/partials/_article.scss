@@ -444,4 +444,14 @@ p.vcenter {  //must be used with parent having relative position
     }
 }
 
+//Twitter
+.timeline-Tweet-timestamp,
+.timeline-Tweet-text {
+    font: $default-font !important;
+    color: $primary-color !important;
+}
 
+//Hepsia
+.hepsia-top-video > div {
+    margin: 0 auto;
+}
