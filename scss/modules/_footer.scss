@@ -3,7 +3,6 @@
 #footer {
     width: 100%;
     border-top: 0;
-    text-align: center;
     font: $footer-default-font;    
     color: $footer-default-text-color;
     padding: 1em;
@@ -54,20 +53,9 @@
         }
     }
 }
-
-#footer_menu, 
-.footer_menu {
-	float: none;
-	display: inline-block;
-	width: 23%;
-	margin: 0;
-	padding: 0px;
-	vertical-align: top;
-	text-align: left;
-}
-#footer_menu h3, 
+ 
 .footer_menu h3 {
-	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font-family: $footer-default-font-family;
 	margin: 10px;
 }
 

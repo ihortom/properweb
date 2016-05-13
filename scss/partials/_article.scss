@@ -445,9 +445,10 @@ p.vcenter {  //must be used with parent having relative position
 }
 
 //Twitter
-.timeline-Tweet-timestamp,
-.timeline-Tweet-text {
+a.timeline-Tweet-timestamp,
+p.timeline-Tweet-text {
     font: $default-font !important;
+    font-family: $main-font-family !important;
     color: $primary-color !important;
 }
 
