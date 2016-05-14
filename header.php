@@ -188,5 +188,5 @@ var template_directory = "<?php bloginfo('template_directory') ?>";
 
     <?php include_once get_stylesheet_directory().'/parts/topbar.php'; ?>
 
-    <?php if(function_exists('is_rp_page')){ if(!is_front_page() and is_rp_page($wp_query->post->ID) and function_exists('rp_breadcrumbs')) rp_breadcrumbs($wp_query->post->ID); elseif(function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); } ?>
+    <?php if(function_exists('is_rp_page')){ if(!is_front_page() and is_rp_page($wp_query->post->ID) and function_exists('pweb_rp_breadcrumbs')) pweb_rp_breadcrumbs($wp_query->post->ID); elseif(function_exists('pweb_breadcrumbs')) pweb_breadcrumbs(); } ?>
     <div id="content" class="position">

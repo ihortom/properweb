@@ -17,9 +17,9 @@ foreach ($theme_options as $value) {
         </div>
         <div id="footer" class="container-fluid">
             <div class="row">
-                <div class="col-sm-6 col-md-8">
+                <div class="col-sm-6 col-md-7">
                     <div class="row no-gutters">
-                <div class="footer_menu col-md-6">
+                <div class="footer_menu col-md-7">
                 <?php if(is_active_nav_menu('footer1')){?>
                         <h3><?=wp_nav_menu_title('footer1');?></h3>
                         <?php wp_nav_menu( array( 'container' =>'' ,'link_before' => ' ', 'fallback_cb' => '' , 'theme_location' => 'footer1' , 'depth' =>1) );?>
@@ -51,7 +51,7 @@ foreach ($theme_options as $value) {
                         </ul>
                 <?php }?>
                 </div>-->
-                <div id="footer-follow-us" class="footer_menu col-sm-6 col-md-4">
+                <div id="footer-follow-us" class="footer_menu col-sm-6 col-md-5">
                 <?php if(is_active_nav_menu('footer3')){?>
                         <h3><?=wp_nav_menu_title('footer3');?></h3>
                         <?php wp_nav_menu( array( 'container' =>'' ,'link_before' => ' ', 'fallback_cb' => '' , 'theme_location' => 'footer3' , 'depth' =>1) );?>
@@ -65,11 +65,28 @@ foreach ($theme_options as $value) {
                 </div>
                 </div><!-- nested row -->
                 </div>
-                <div id="footer-contacts" class="footer_menu col-sm-6 col-md-4">
-                    <?php if(is_active_nav_menu('footer4')){?>
+                <div id="footer-contacts" class="footer_menu col-sm-6 col-md-5">
+                    <?php if (is_active_nav_menu('footer4')) {?>
                     <h3><?=wp_nav_menu_title('footer4');?></h3>
                     <?php wp_nav_menu( array( 'container' =>'' ,'link_before' => ' ', 'fallback_cb' => '' , 'theme_location' => 'footer4' , 'depth' =>1) );?>
                     <?php } else if ( is_active_sidebar('footer-sidebar') ) { dynamic_sidebar( 'footer-sidebar' ); } else { ?>
+                    <h3><img src="/images/logo24.png" alt="Logo" style="padding-right:10px;vertical-align: middle;">PROPERWEB</h3>
+                    <div class="textwidget">
+                        <ul id="footer-contacts-sidebar" class="menu">
+                            <li class="menu-item" style="font-weight:bold">Website Development</li>
+                            <li class="menu-item">Canada Phone: +1-306-491-6539</li>
+                            <li class="menu-item">&nbsp;</li>
+                            <li class="menu-item" style="font-weight:bold">Hosting Support</li>
+                            <?php global $rp_info;?>
+                            <li class="menu-item">Our ID: <?php echo $GLOBALS['rp_info']['store_id'];?></li>
+                            <li class="menu-item">CA/US Toll Free: <?php echo @$rp_info['company']['us_phones'][0]?></li>
+                            <li class="menu-item">US Phone: <?php echo @$rp_info['company']['us_phones'][1]?></li>
+                            <li class="menu-item">UK Phone: <?php echo @$rp_info['company']['uk_phones'][0]?></li>
+                            <li class="menu-item">AU Phone: <?php echo @$rp_info['company']['au_phones'][0]?></li>
+                        </ul>
+                    </div>
+                </div>
+<!--                    
                     <h3>Application Hosting</h3>
                     <ul class="menu">
                         <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_wordpress_hosting'));?>">WordPress Hosting</a></li>
@@ -79,6 +96,7 @@ foreach ($theme_options as $value) {
                         <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_drupal_hosting'));?>">Drupal Hosting</a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?php echo get_permalink(get_option('rp_moodle_hosting'));?>">Moodle Hosting</a></li>
                     </ul>
+-->
                     <?php } ?>
                 </div>
 <!--

@@ -89,7 +89,7 @@
 .breadcrumb {
     margin: 0 .5em;
     a,span {
-        font: normal .9em $substitute-font-family;
+        font: normal 1rem $substitute-font-family;
     }
     >span+span:before {
         content: "/ ";

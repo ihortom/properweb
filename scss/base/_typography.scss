@@ -12,13 +12,12 @@ html {
 body {
   min-width: inherit;
   background-color: #FCEDED;
-  font-family: $main-font-family, $substitute-font-family;
+  font-family: $main-font-family;
   font-size: 1em;
   line-height: 1.4;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $main-font-family, $substitute-font-family;
     font-weight: bold;
 }
 
