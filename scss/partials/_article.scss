@@ -456,3 +456,37 @@ p.timeline-Tweet-text {
 .hepsia-top-video > div {
     margin: 0 auto;
 }
+
+//Domain tabs
+.long-domain-table {
+    padding: 5px;
+    background: #EBEBEB;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.rp-tld-price {
+    thead {
+        font-weight: bold;
+        background-color: darken(#f9f9f9, 10%);
+        font-size: 1.125em;
+    }
+    th,td {
+        text-align: center;
+    }
+}
+
+.rp-tld-col-first {
+    text-align: left;
+    font-weight: bold;
+    background-color: darken(#f9f9f9, 10%);
+}
+td.rp-tld-col-first {
+    font-size: 1.125em;
+}
+
+.domain-tabs {
+    font-weight: bold;
+}

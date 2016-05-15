@@ -9,10 +9,10 @@
  * @since ProperWeb 2.0
  */
  $custom_meta = get_post_custom();
-global $theme_options;
-foreach ($theme_options as $value) {
-    if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
-}
+//global $theme_options;
+//foreach ($theme_options as $value) {
+//    if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
+//}
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -22,10 +22,10 @@ foreach ($theme_options as $value) {
 	/*
 	 * Print the <title> tag based on what is being viewed.
 	 */
-if(empty($custom_meta['rpwp_meta_title'][0])){
+if (empty($custom_meta['rpwp_meta_title'][0])) {
 	global $page, $paged;
 
-	wp_title( '|', true, 'right' );
+	echo ucwords(strtolower(wp_title( '|', false, 'right' )));
 
 	// Add the blog name.
 	bloginfo( 'name' );
@@ -38,8 +38,9 @@ if(empty($custom_meta['rpwp_meta_title'][0])){
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
 		echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
-}else{
-	echo apply_filters('the_title', strip_tags(do_shortcode($custom_meta['rpwp_meta_title'][0])));
+}
+else {
+    echo ucwords(strtolower(apply_filters('the_title', strip_tags(do_shortcode($custom_meta['rpwp_meta_title'][0])))));
 }
 	?></title>
 <?php if(isset($custom_meta['rpwp_meta_description'][0])){ ?><meta name="description" content="<?php echo apply_filters('the_title', strip_tags(do_shortcode($custom_meta['rpwp_meta_description'][0])));?>" /><?php } ?>
