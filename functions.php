@@ -78,25 +78,25 @@ function pweb_send_contact_form() {
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
         $email_from = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL); 
         $subject = "[ProperWeb]: " . filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_STRING); 
-        $subject = "=?utf-8?b?" . base64_encode($Subject) . "?=";
+        $subject = "=?utf-8?b?" . base64_encode($subject) . "?=";
         $company = filter_input(INPUT_POST, 'company', FILTER_SANITIZE_STRING); 
         $phone = filter_input(INPUT_POST, 'phone'); 
         $referer = filter_input(INPUT_POST, 'referer', FILTER_VALIDATE_URL);
         $userip = ($_SERVER['X_FORWARDED_FOR']) ? $_SERVER['X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
         date_default_timezone_set('America/Regina');
-        $message = 
-            '\r\nName: '.$name.
-            '\r\nEmail: '.$email_from.
-            '\r\nCompany: '.$company.
-            '\r\nContact number: '.$phone.
-            '\r\nMessage:\n'.filter_input(INPUT_POST, 'message').
-            '\r\nReferrer URL: '.$referer.
-            '\r\nIP address: '. $userip.
-            '\r\nDate\\Time: '.date('Y-m-d H:i').
-            '\r\nUser agent: '.$_SERVER['HTTP_USER_AGENT']; 
-        
-        $headers  = 'MIME-Version: 1.0' . "\n"; 
-        $headers .= 'Content-type: text/plain; charset=utf-8' . "\r\n";  
+        $message = '<html><head><title>'.$subject.'</title></head><body>'.
+            '<p><b>Name</b>: '.$name.'</p>'.
+            '<p><b>Email</b>: '.$email_from.'</p>'.
+            '<p><b>Company</b>: '.$company.'</p>'.
+            '<p><b>Contact number</b>: '.$phone.'</p>'.
+            '<h3>Message:</h3><div>'.filter_input(INPUT_POST, 'message').'</div><br><hr>'.
+            '<p style="font-family:monospace"><b>Referrer URL</b>: '.$referer.'<br>'.
+            '<b>IP address</b>: '. $userip.'<br>'.
+            '<b>Date\\Time</b>: '.date('Y-m-d H:i').'<br>'.
+            '<b>User agent</b>: '.$_SERVER['HTTP_USER_AGENT'].'</p></body></html>';
+       
+        $headers  = 'MIME-Version: 1.0' . "\r\n"; 
+        $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";  
 
         //$success = false;
         

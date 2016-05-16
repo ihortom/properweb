@@ -1,7 +1,7 @@
 /*****************************************/
 /*** Article                          ****/
 /*****************************************/
-#domain-tld-banner-2,
+/*#domain-tld-banner-2,
 #script-banner {
     float: none;
     width: 98%;
@@ -17,8 +17,8 @@
     -o-border-radius: 0;
     -ms-border-radius: 0;
     border-radius: 0;
-    -moz-box-shadow:1px 5px 5px 15px #333; /* Firefox */
-    -webkit-box-shadow: 5px 5px 15px #333; /* Safari, Chrome */
+    -moz-box-shadow:1px 5px 5px 15px #333;  Firefox 
+    -webkit-box-shadow: 5px 5px 15px #333;  Safari, Chrome 
     box-shadow: 5px 5px 15px #333;
     text-align: center;
 }
@@ -30,7 +30,7 @@
     font-size: 2.5em;
     line-height: 1.2em;
     color: #fff;
-} 
+} */
 #pw_domain-tld {
     width: 35%;
     display: inline-block;
@@ -50,7 +50,7 @@
     vertical-align: middle;
 }
 
-.pr_rp_sing_up_form {
+/*.pr_rp_sing_up_form {
     padding: 5px 0;
     overflow: hidden;
 }
@@ -96,7 +96,7 @@ h3.script-banner-title {
     float: none;
     margin: 0;
     display: inline-block;
-}
+}*/
 .ui-widget {
     font-family: 'Open Sans', Verdana, Arial, sans-serif !important;
     }
@@ -446,7 +446,9 @@ p.vcenter {  //must be used with parent having relative position
 
 //Twitter
 a.timeline-Tweet-timestamp,
-p.timeline-Tweet-text {
+p.timeline-Tweet-text.active,
+.SandboxRoot.env-bp-430 .timeline-Tweet-text,
+.SandboxRoot.env-bp-330 .timeline-Tweet-text {
     font: $default-font !important;
     font-family: $main-font-family !important;
     color: $primary-color !important;
@@ -467,7 +469,8 @@ p.timeline-Tweet-text {
     -webkit-border-radius: 4px;
 }
 
-.rp-tld-price {
+.rp-tld-price,
+.rp-tld-info {
     thead {
         font-weight: bold;
         background-color: darken(#f9f9f9, 10%);
@@ -489,4 +492,16 @@ td.rp-tld-col-first {
 
 .domain-tabs {
     font-weight: bold;
+    &.nav-tabs>li {
+        @media only screen and (max-width: 640px) {
+            width: 100%;
+        }
+    }
+    &.nav-tabs>li.active>a, &.nav-tabs>li.active>a:hover, &.nav-tabs>li.active>a:focus {
+        cursor: pointer;
+        @media only screen and (max-width: 640px) {
+            border-bottom-color: #DDD;
+            background-color: darken(#f9f9f9, 10%);
+        }
+    }
 }

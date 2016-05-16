@@ -1,3 +1,9 @@
+.ui-widget-content {
+    @media only screen and (min-width: $screen-sm) {
+        box-shadow: 3px 2px 5px #999;
+    }
+}
+
 .holder {
     h2 {
         text-transform: uppercase;
