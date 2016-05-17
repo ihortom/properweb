@@ -9,6 +9,10 @@
  * @subpackage ProperWeb
  * @since ProperWeb 2.0
  */
+global $theme_options;
+foreach ($theme_options as $value) {
+    if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
+}
 ?>
         </div>
         <div id="footer" class="container-fluid">

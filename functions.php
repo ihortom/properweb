@@ -84,15 +84,15 @@ function pweb_send_contact_form() {
         $referer = filter_input(INPUT_POST, 'referer', FILTER_VALIDATE_URL);
         $userip = ($_SERVER['X_FORWARDED_FOR']) ? $_SERVER['X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
         date_default_timezone_set('America/Regina');
-        $message = '<html><head><title>'.$subject.'</title></head><body>'.
+        $message = '<html><head><title>'.$subject.'</title></head><body style="font-family:Arial,Geneva,sans-serif">'.
             '<p><b>Name</b>: '.$name.'</p>'.
             '<p><b>Email</b>: '.$email_from.'</p>'.
             '<p><b>Company</b>: '.$company.'</p>'.
             '<p><b>Contact number</b>: '.$phone.'</p>'.
-            '<h3>Message:</h3><div>'.filter_input(INPUT_POST, 'message').'</div><br><hr>'.
-            '<p style="font-family:monospace"><b>Referrer URL</b>: '.$referer.'<br>'.
+            '<h3>Message:</h3><div>'.nl2br(filter_input(INPUT_POST, 'message'),false).'</div><br><hr>'.
+            '<p style="font-family:monospace;font-size: 12px"><b>Referrer URL</b>: '.$referer.'<br>'.
             '<b>IP address</b>: '. $userip.'<br>'.
-            '<b>Date\\Time</b>: '.date('Y-m-d H:i').'<br>'.
+            '<b>Date/Time</b>: '.date('Y-m-d H:i').'<br>'.
             '<b>User agent</b>: '.$_SERVER['HTTP_USER_AGENT'].'</p></body></html>';
        
         $headers  = 'MIME-Version: 1.0' . "\r\n"; 
@@ -107,10 +107,10 @@ function pweb_send_contact_form() {
               . "X-From-IP: " . $userip);
         
         if ($success) {
-            header("Location: {$referer}?message=sent");
+            header("Location: {$referer}?message=sent#contact-us");
         }
         else {
-            header("Location: {$referer}?message=error");
+            header("Location: {$referer}?message=error#contact-us");
         }
     }
 }
@@ -133,7 +133,7 @@ function pweb_contact_us_shortcode() {
     $state = ' hidden';
     }
     $contact_form =<<<CONTACT
-<div class="pw-panel headline">
+<div class="pw-panel headline" id="contact-us">
     <h2>Contact Us</h2>
     <div class="row">
         <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2"><br>

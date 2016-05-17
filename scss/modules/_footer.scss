@@ -9,6 +9,7 @@
     margin-top: 0;
     .menu {
         list-style-type: none;
+        line-height: 1.6em;
         margin: 10px;
         padding: 0;
         a {
@@ -23,7 +24,7 @@
             color: $link-hover-color;
         }
     }
-    #footer-sidebar {
+/*    #footer-sidebar {
         color: $secondary-color;
         margin:	0;
         .widget-title {
@@ -51,7 +52,7 @@
         ul, ol, dl {
             font-size: $footer-default-font-size;
         }
-    }
+    }*/
 }
  
 .footer_menu h3 {
