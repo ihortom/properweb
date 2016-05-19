@@ -10,7 +10,10 @@
   <loc>https://www.properweb.ca/</loc>
 </url>
 <url>
-  <loc>https://www.properweb.ca/hosting/</loc>
+  <loc>https://www.properweb.ca/webspace-hosting/</loc>
+</url>
+<url>
+  <loc>https://www.properweb.ca/webspace-hosting/compare-shared-hosting-plans</loc>
 </url>
 <url>
   <loc>https://www.properweb.ca/web-development/</loc>
@@ -19,177 +22,21 @@
   <loc>https://www.properweb.ca/website-maintenance/</loc>
 </url>
 <url>
-  <loc>https://www.properweb.ca/domain-name-registration/</loc>
+  <loc>https://www.properweb.ca/domain-names/</loc>
+</url>
+<url>
+  <loc>https://www.properweb.ca/domain-names/find-domain-name/</loc>
 </url>
 <url>
   <loc>https://www.properweb.ca/ssl-certificates/</loc>
 </url>
 <url>
-  <loc>https://www.properweb.ca/order/</loc>
+  <loc>https://www.properweb.ca/order-form/</loc>
 </url>
 <url>
-  <loc>https://www.properweb.ca/order/shared-hosting-plan/</loc>
+  <loc>https://www.properweb.ca/contact/</loc>
 </url>
 <url>
-  <loc>https://www.properweb.ca/hosting/compare-business-plans/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/terms-and-conditions/web-hosting-terms-of-service/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/terms-and-conditions/acceptable-use-policy/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/terms-and-conditions/service-level-guarantees/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/terms-and-conditions/order-verification-policy/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/terms-and-conditions/privacy-policy/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/terms-and-conditions/domain-name-registration-agreement/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/terms-and-conditions/id-protection-agreement/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/terms-and-conditions/cancellation-refund-policy/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/hosting/compare-personal-plans/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/com-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/net-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/biz-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/org-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/ca-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/info-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/us-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/co-uk-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/eu-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/ru-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/pro-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/de-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/name-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/mobi-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/org-uk-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/me-uk-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/net-au-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/com-au-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/asia-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/net-nz-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/co-za-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/co-nz-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-registration/org-nz-domain-name/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-names-shared-hosting-plans/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/the-hepsia-web-hosting-cp/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/terms-and-conditions/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-name-shared-hosting-plans/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/the-hepsia-web-hosting-cp/domain-manager/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-names-registration/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/domain-names-information/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/the-hepsia-web-hosting-cp/file-manager/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/the-hepsia-web-hosting-cp/email-manager/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/the-hepsia-web-hosting-cp/database-manager/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/the-hepsia-web-hosting-cp/web-app-installer/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/the-hepsia-web-hosting-cp/advanced-features/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/terms-and-conditions/domain-name-dispute-resolution-policy/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/wordpress-hosting/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/prestashop-hosting/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/opencart-hosting/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/joomla-hosting/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/drupal-web-hosting/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/moodle-web-hosting/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/vtiger-web-hosting/</loc>
-</url>
-<url>
-  <loc>https://www.properweb.ca/openrealty-web-hosting/</loc>
+  <loc>https://www.properweb.ca/hepsia-control-panel/</loc>
 </url>
 </urlset>

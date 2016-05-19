@@ -40,7 +40,7 @@ if (empty($custom_meta['rpwp_meta_title'][0])) {
 		echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
 }
 else {
-    echo ucwords(strtolower(apply_filters('the_title', strip_tags(do_shortcode($custom_meta['rpwp_meta_title'][0])))));
+    echo apply_filters('the_title', strip_tags(do_shortcode($custom_meta['rpwp_meta_title'][0])));
 }
 	?></title>
 <?php if(isset($custom_meta['rpwp_meta_description'][0])){ ?><meta name="description" content="<?php echo apply_filters('the_title', strip_tags(do_shortcode($custom_meta['rpwp_meta_description'][0])));?>" /><?php } ?>
