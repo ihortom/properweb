@@ -151,10 +151,10 @@ function pweb_contact_us_shortcode() {
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label class="control-label" for="pwcf-name">Your Name:*</label>
+                            <label class="control-label" for="pwcf-name">Your name:*</label>
                             <div class="input-group">
                                 <span class="glyphicon glyphicon-user input-group-addon"></span>
-                                <input type="text" name="name" id="pwcf-name" class="form-control" placeholder="Your Name">
+                                <input type="text" name="name" id="pwcf-name" class="form-control" placeholder="Your name">
                             </div>
                         </div>
                         <div class="form-group">
@@ -191,7 +191,7 @@ function pweb_contact_us_shortcode() {
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label" for="pwcf-message">Your Message:*</label>
+                            <label class="control-label" for="pwcf-message">Your message:*</label>
                             <div class="input-item">
                                 <textarea name="message" id="pwcf-message" class="form-control" rows="6"></textarea>
                             </div>

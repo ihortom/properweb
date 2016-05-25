@@ -2,11 +2,16 @@
 
 body.login {
     background: $login-body-background;
+    font-size: 14px;
+    label {
+        color: $primary-color;
+    }
 }
 #login {
     background: $login-body-background;
 }
 #loginform {
+    color: $primary-color;
     background: $login-form-background;
     border-radius: 2px;
     -moz-border-radius: 2px;

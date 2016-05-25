@@ -5,6 +5,7 @@
     height: auto;
     max-width: $main-content-max-width;
     min-width: 320px;
+    margin: 0 auto;
 }
 
 #wrapper_fixed {
@@ -24,7 +25,7 @@
     display: block;
 }
 
-#phone {
+#phones {
     float: left;
     padding: 7px 10px 10px 0;
     color: #fff;
@@ -40,7 +41,7 @@
 }
 
 @media only screen and (max-width: 380px) {
-    #phone,
+    #phones,
     #dev_phone {
         display: none;
     }

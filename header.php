@@ -68,7 +68,7 @@ var template_directory = "<?php bloginfo('template_directory') ?>";
 <body <?php body_class(); ?>>
 <div id="wrapper_fixed">
     <div id="header_top" class="clearfix">
-        <div id="phone"><span class="glyphicon glyphicon-earphone"></span></div>
+        <div id="phones"><span class="glyphicon glyphicon-earphone"></span></div>
         <div id="hosting_phone">
             Hosting <span>(ID:<?php echo $GLOBALS['rp_info']['store_id'];?>)</span> <span class="number">+<?php if (function_exists('rp_support_phone')) echo substr(rp_support_phone(), 1); ?> | </span>
         </div>
