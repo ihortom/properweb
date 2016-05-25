@@ -2,24 +2,33 @@
 #aside {
     width: 100%;
     padding-top: 10px;
+    min-width: 320px;
     @media (min-width: 42.5em) {    // 680px
-        width: 280px;
+        width: 320px;
         display: table-cell;
         vertical-align: top;
-        padding-top: 0;
     }
 }
 
-#aside-sidebar {
+#aside-sidebar,
+#menu-sitemap {
+    margin: 0;
+    padding: 0;
     text-decoration: none;
-    h3 {
-        margin: 0;
+    .widgettitle {
+        margin-top: 0;
     }
-    li a {
-        text-decoration: none;
+    li {
+        margin: 0.5rem 0;
+        a {
+            text-decoration: none;
+        }
     }
     ul.children {
         margin-left: 1.25rem;
+    }
+    .sub-menu {
+        margin: 0;
     }
 }
 
@@ -35,11 +44,7 @@
 @media (min-width: 42.5em) {    // 680px
 
     #aside.right-sidebar {
-        padding-left: 20px;
-    }
-    
-    #aside.left-sidebar {
-        padding-right: 20px;
+        padding: 20px 20px 0 0;
     }
     
     .row-with-sidebar {
