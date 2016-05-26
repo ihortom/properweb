@@ -4,7 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
   <loc>https://www.properweb.ca/</loc>
@@ -38,5 +37,35 @@
 </url>
 <url>
   <loc>https://www.properweb.ca/hepsia-control-panel/</loc>
+</url>
+<url>
+  <loc>https://www.properweb.ca/terms-of-service/</loc>
+</url>
+<url>
+  <loc>https://www.properweb.ca/terms-of-service/web-hosting-terms-of-service/</loc>
+</url>
+<url>
+  <loc>https://www.properweb.ca/terms-of-service/acceptable-use-policy/</loc>
+</url>
+<url>
+  <loc>https://www.properweb.ca/terms-of-service/service-level-guarantees/</loc>
+</url>
+<url>
+  <loc>https://www.properweb.ca/terms-of-service/order-verification-policy/</loc>
+</url>
+<url>
+  <loc>https://www.properweb.ca/terms-of-service/privacy-policy/</loc>
+</url>
+<url>
+  <loc>https://www.properweb.ca/terms-of-service/domain-name-registration-agreement/</loc>
+</url>
+<url>
+  <loc>https://www.properweb.ca/terms-of-service/domain-name-dispute-resolution-policy/</loc>
+</url>
+<url>
+  <loc>https://www.properweb.ca/terms-of-service/id-protection-agreement/</loc>
+</url>
+<url>
+  <loc>https://www.properweb.ca/terms-of-service/cancellation-and-refund-policy/</loc>
 </url>
 </urlset>

@@ -10,7 +10,7 @@ jQuery(document).ready(
     function($) {
         
         //promo popup
-        $('[data-reveal-id="flash"]').trigger('click');
+        $('#flash').modal('show');
         
         //dropdown hover on large screen
         $('.nav li.dropdown').hover(

@@ -14,6 +14,15 @@
  */
 
 get_header();
+
+if ( function_exists('rwmb_meta') && rwmb_meta('pweb_flash', array(), $wp_query->post->ID) ) : ?>
+
+<div class="row">
+    <?php echo do_shortcode('[promo_flash id='.rwmb_meta('pweb_flash', array(), $wp_query->post->ID).']'); ?>
+</div>
+
+<?php endif; 
+
 remove_filter ('the_content', 'wpautop');
 
 /* Run the loop to output the posts.
