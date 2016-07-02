@@ -137,17 +137,17 @@ function pweb_contact_us_shortcode() {
 <div class="pw-panel headline" id="contact-us">
     <h2>Contact Us</h2>
     <div class="row">
-        <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2"><br>
+        <div class="col-xs-12 col-md-10 col-md-offset-1"><br>
             <p>Send us a message and we will respond within 24 hours or call our developers in Saskatoon on (306) 491-6539</p>
         </div>
     </div>
     <div class="row no-gutters">
-        <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
             {$message}
         </div>
     </div>
     <div class="row text-left{$state}">
-        <div class="panel panel-default pw-contact-form col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default pw-contact-form col-xs-12 col-md-10 col-md-offset-1">
             <form id="pwcf" action="{$controller}" method="post">
                 <div class="row">
                     <div class="col-sm-6">
